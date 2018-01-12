@@ -22,7 +22,7 @@
  * @link       http://www.wpdispensary.com
  * @since      1.0.0
  *
- * @package    Wpd_Gear
+ * @package    WPD_Gear
  */
 
 // If uninstall not called from WordPress, then exit.

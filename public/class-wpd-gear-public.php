@@ -65,10 +65,10 @@ class Wpd_Gear_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wpd_Gear_Loader as all of the hooks are defined
+		 * defined in WPD_Gear_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wpd_Gear_Loader will then create the relationship
+		 * The WPD_Gear_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -88,10 +88,10 @@ class Wpd_Gear_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wpd_Gear_Loader as all of the hooks are defined
+		 * defined in WPD_Gear_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wpd_Gear_Loader will then create the relationship
+		 * The WPD_Gear_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */

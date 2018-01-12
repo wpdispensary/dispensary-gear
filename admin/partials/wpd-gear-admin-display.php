@@ -8,8 +8,8 @@
  * @link       https://www.wpdispensary.com
  * @since      1.0.0
  *
- * @package    Wpd_Gear
- * @subpackage Wpd_Gear/admin/partials
+ * @package    WPD_Gear
+ * @subpackage WPD_Gear/admin/partials
  */
 ?>
 

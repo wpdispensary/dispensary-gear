@@ -6,8 +6,8 @@
  * @link       https://www.wpdispensary.com
  * @since      1.0.0
  *
- * @package    Wpd_Gear
- * @subpackage Wpd_Gear/admin
+ * @package    WPD_Gear
+ * @subpackage WPD_Gear/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Wpd_Gear
- * @subpackage Wpd_Gear/admin
+ * @package    WPD_Gear
+ * @subpackage WPD_Gear/admin
  * @author     WP Dispensary <deviodigital@gmail.com>
  */
-class Wpd_Gear_Admin {
+class WPD_Gear_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -65,10 +65,10 @@ class Wpd_Gear_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wpd_Gear_Loader as all of the hooks are defined
+		 * defined in WPD_Gear_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wpd_Gear_Loader will then create the relationship
+		 * The WPD_Gear_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -88,10 +88,10 @@ class Wpd_Gear_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wpd_Gear_Loader as all of the hooks are defined
+		 * defined in WPD_Gear_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wpd_Gear_Loader will then create the relationship
+		 * The WPD_Gear_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */

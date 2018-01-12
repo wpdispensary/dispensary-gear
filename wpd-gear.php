@@ -10,7 +10,7 @@
  *
  * @link              https://www.wpdispensary.com
  * @since             1.0.0
- * @package           Wpd_Gear
+ * @package           WPD_Gear
  *
  * @wordpress-plugin
  * Plugin Name:       WP Dispensary's Gear
@@ -43,7 +43,7 @@ define( 'PLUGIN_NAME_VERSION', '1.0.0' );
  */
 function activate_wpd_gear() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpd-gear-activator.php';
-	Wpd_Gear_Activator::activate();
+	WPD_Gear_Activator::activate();
 }
 
 /**
@@ -52,7 +52,7 @@ function activate_wpd_gear() {
  */
 function deactivate_wpd_gear() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpd-gear-deactivator.php';
-	Wpd_Gear_Deactivator::deactivate();
+	WPD_Gear_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_wpd_gear' );
@@ -75,7 +75,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-wpd-gear.php';
  */
 function run_wpd_gear() {
 
-	$plugin = new Wpd_Gear();
+	$plugin = new WPD_Gear();
 	$plugin->run();
 
 }

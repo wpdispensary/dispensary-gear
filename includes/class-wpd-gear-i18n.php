@@ -9,8 +9,8 @@
  * @link       https://www.wpdispensary.com
  * @since      1.0.0
  *
- * @package    Wpd_Gear
- * @subpackage Wpd_Gear/includes
+ * @package    WPD_Gear
+ * @subpackage WPD_Gear/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Wpd_Gear
- * @subpackage Wpd_Gear/includes
+ * @package    WPD_Gear
+ * @subpackage WPD_Gear/includes
  * @author     WP Dispensary <deviodigital@gmail.com>
  */
-class Wpd_Gear_i18n {
+class WPD_Gear_i18n {
 
 
 	/**

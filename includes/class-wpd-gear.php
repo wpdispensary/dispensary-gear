@@ -35,7 +35,7 @@ class Wpd_Gear {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Wpd_Gear_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      WPD_Gear_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -86,10 +86,10 @@ class Wpd_Gear {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Wpd_Gear_Loader. Orchestrates the hooks of the plugin.
-	 * - Wpd_Gear_i18n. Defines internationalization functionality.
-	 * - Wpd_Gear_Admin. Defines all hooks for the admin area.
-	 * - Wpd_Gear_Public. Defines all hooks for the public side of the site.
+	 * - WPD_Gear_Loader. Orchestrates the hooks of the plugin.
+	 * - WPD_Gear_i18n. Defines internationalization functionality.
+	 * - WPD_Gear_Admin. Defines all hooks for the admin area.
+	 * - WPD_Gear_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -122,14 +122,29 @@ class Wpd_Gear {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wpd-gear-public.php';
 
-		$this->loader = new Wpd_Gear_Loader();
+		/**
+		 * The class responsible for creating custom metaboxes
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-metaboxes.php';
+
+		/**
+		 * The class responsible for creating custom shortcodes
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-shortcodes.php';
+
+		/**
+		 * The class responsible for creating custom widgets
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-widgets.php';
+
+		$this->loader = new WPD_Gear_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Wpd_Gear_i18n class in order to set the domain and to register the hook
+	 * Uses the WPD_Gear_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,7 +152,7 @@ class Wpd_Gear {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Wpd_Gear_i18n();
+		$plugin_i18n = new WPD_Gear_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -152,7 +167,7 @@ class Wpd_Gear {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Wpd_Gear_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new WPD_Gear_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -168,7 +183,7 @@ class Wpd_Gear {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Wpd_Gear_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new WPD_Gear_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -199,7 +214,7 @@ class Wpd_Gear {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Wpd_Gear_Loader    Orchestrates the hooks of the plugin.
+	 * @return    WPD_Gear_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

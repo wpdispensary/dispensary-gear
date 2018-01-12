@@ -6,8 +6,8 @@
  * @link       https://www.wpdispensary.com
  * @since      1.0.0
  *
- * @package    Wpd_Gear
- * @subpackage Wpd_Gear/includes
+ * @package    WPD_Gear
+ * @subpackage WPD_Gear/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Wpd_Gear
- * @subpackage Wpd_Gear/includes
+ * @package    WPD_Gear
+ * @subpackage WPD_Gear/includes
  * @author     WP Dispensary <deviodigital@gmail.com>
  */
-class Wpd_Gear_Deactivator {
+class WPD_Gear_Deactivator {
 
 	/**
 	 * Short Description. (use period)
