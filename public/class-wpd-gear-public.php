@@ -6,8 +6,8 @@
  * @link       https://www.wpdispensary.com
  * @since      1.0.0
  *
- * @package    Wpd_Gear
- * @subpackage Wpd_Gear/public
+ * @package    WPD_Gear
+ * @subpackage WPD_Gear/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Wpd_Gear
- * @subpackage Wpd_Gear/public
+ * @package    WPD_Gear
+ * @subpackage WPD_Gear/public
  * @author     WP Dispensary <deviodigital@gmail.com>
  */
-class Wpd_Gear_Public {
+class WPD_Gear_Public {
 
 	/**
 	 * The ID of this plugin.
