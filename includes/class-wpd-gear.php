@@ -9,8 +9,8 @@
  * @link       https://www.wpdispensary.com
  * @since      1.0.0
  *
- * @package    Wpd_Gear
- * @subpackage Wpd_Gear/includes
+ * @package    WPD_Gear
+ * @subpackage WPD_Gear/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Wpd_Gear
- * @subpackage Wpd_Gear/includes
+ * @package    WPD_Gear
+ * @subpackage WPD_Gear/includes
  * @author     WP Dispensary <deviodigital@gmail.com>
  */
-class Wpd_Gear {
+class WPD_Gear {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
