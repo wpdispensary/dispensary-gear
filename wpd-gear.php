@@ -10,7 +10,7 @@
  * @wordpress-plugin
  * Plugin Name:       WP Dispensary's Gear
  * Plugin URI:        https://www.wpdispensary.com/gear-menu-type
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       This plugin adds a GEAR menu type to the WP Dispensary menu plugin. Brought to you by <a href="http://www.deviodigital.com/">Devio Digital</a> &amp; <a href="https://www.wpdispensary.com">WP Dispensary</a>.
  * Version:           1.0.0
  * Author:            WP Dispensary
  * Author URI:        http://www.wpdispensary.com
