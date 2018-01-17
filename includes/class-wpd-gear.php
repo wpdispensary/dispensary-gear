@@ -123,6 +123,11 @@ class WPD_Gear {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wpd-gear-public.php';
 
 		/**
+		 * The class responsible for creating custom post type
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-post-type.php';
+
+		/**
 		 * The class responsible for creating custom metaboxes
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-metaboxes.php';
