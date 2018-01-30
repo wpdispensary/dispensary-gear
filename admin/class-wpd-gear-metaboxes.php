@@ -27,7 +27,7 @@ function wpd_gear_pricing_metaboxes() {
 			__( 'Product Pricing', 'wp-dispensary' ),
 			'wpd_gear_prices',
 			$screen,
-			'side',
+			'normal',
 			'default'
 		);
 	}
