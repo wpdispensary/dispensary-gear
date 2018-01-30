@@ -98,7 +98,7 @@ class wpd_gear_widget extends WP_Widget {
 					echo "<span class='wpdispensary-widget-title'><a href='" . esc_url( get_permalink( $post->ID ) ) . "'>" . get_the_title( $post->ID ) . "</a></span>";
 				}
 				if ( 'on' === $instance['gearcategory'] ) {
-					echo "<span class='wpdispensary-widget-categories'>" . get_the_term_list( $post->ID, 'flowers_category' ) . "</a></span>";
+					echo "<span class='wpdispensary-widget-categories'>" . get_the_term_list( $post->ID, 'gear_category' ) . "</a></span>";
 				}
 				do_action( 'wpd_gear_widget_inside_bottom' );
 				echo '</div>';
@@ -191,12 +191,12 @@ class wpd_gear_widget extends WP_Widget {
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['gearname'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'gearname' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'gearname' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'gearname' ) ); ?>"><?php esc_html_e( 'Display flower name?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'gearname' ) ); ?>"><?php esc_html_e( 'Display gear name?', 'wp-dispensary' ); ?></label>
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['gearcategory'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'gearcategory' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'gearcategory' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'gearcategory' ) ); ?>"><?php esc_html_e( 'Display flower category?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'gearcategory' ) ); ?>"><?php esc_html_e( 'Display gear category?', 'wp-dispensary' ); ?></label>
 	</p>
 
 	<p>
