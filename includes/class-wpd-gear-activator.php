@@ -30,6 +30,15 @@ class WPD_Gear_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
+		wpd_gear();
+		wpdispensary_gearcategory();
+
+		/**
+		 * Flush Rewrite Rules
+		 */
+		global $wp_rewrite;
+		$wp_rewrite->init();
+		$wp_rewrite->flush_rules();
 
 	}
 
