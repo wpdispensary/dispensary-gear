@@ -133,6 +133,11 @@ class WPD_Gear {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-metaboxes.php';
 
 		/**
+		 * The class responsible for creating the data output
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-data-output.php';
+
+		/**
 		 * The class responsible for creating custom shortcodes
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-shortcodes.php';
