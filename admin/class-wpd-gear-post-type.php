@@ -15,10 +15,10 @@
  *
  * @since	   1.0.0
  */
-if ( ! function_exists( 'wpd_gear' ) ) {
+if ( ! function_exists( 'wpdispensary_gear' ) ) {
 
 /** Register Custom Post Type */
-function wpd_gear() {
+function wpdispensary_gear() {
 
 	$labels = array(
 		'name'                  => _x( 'Gear', 'Post Type General Name', 'wpd-gear' ),
@@ -72,7 +72,7 @@ function wpd_gear() {
 	register_post_type( 'gear', $args );
 
 }
-add_action( 'init', 'wpd_gear', 0 );
+add_action( 'init', 'wpdispensary_gear', 0 );
 
 }
 
