@@ -143,6 +143,11 @@ class WPD_Gear {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-data-output.php';
 
 		/**
+		 * The class responsible for creating custom REST API endpoints
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-rest-api.php';
+
+		/**
 		 * The class responsible for creating custom shortcodes
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-shortcodes.php';
