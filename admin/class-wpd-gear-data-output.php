@@ -11,6 +11,28 @@
  */
 
 /**
+ * Function to add "Gear" to data output
+ */
+function wpd_gear_priceoutput( $array ) {
+    $array[] = 'gear';
+    return $array;
+}
+add_filter( 'wpd_original_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_content_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_dataoutput_before_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_dataoutput_title_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_dataoutput_top_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_dataoutput_bottom_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_dataoutput_end_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_dataoutput_after_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_pricingoutput_before_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_pricingoutput_title_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_pricingoutput_top_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_pricingoutput_bottom_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_pricingoutput_end_array', 'wpd_gear_priceoutput' );
+add_filter( 'wpd_pricingoutput_after_array', 'wpd_gear_priceoutput' );
+
+/**
  * Action Hooks
  *
  * This is the file responsible for adding the gear data to menu
