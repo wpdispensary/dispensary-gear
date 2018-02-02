@@ -40,7 +40,7 @@ function wpdispensary_gearcategory() {
 		'menu_name'         => __( 'Categories' ),
 	);
 
-	register_taxonomy( 'gear_category', 'gear', array(
+	register_taxonomy( 'wpd_gear_category', 'gear', array(
 		'hierarchical'      => true,
 		'labels'            => $labels,
 		'show_ui'           => true,

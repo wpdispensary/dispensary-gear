@@ -12,7 +12,7 @@
 /**
  * Adding featured image URL's to Gear Custom Post Type
  */
-function gear_featuredimage( $data, $post, $request ) {
+function wpd_gear_featuredimage( $data, $post, $request ) {
 	$_data                       = $data->data;
 	$thumbnail_id                = get_post_thumbnail_id( $post->ID );
 	$thumbnail                   = wp_get_attachment_image_src( $thumbnail_id, 'full' );
@@ -20,18 +20,18 @@ function gear_featuredimage( $data, $post, $request ) {
 	$data->data                  = $_data;
 	return $data;
 }
-add_filter( 'rest_prepare_gear', 'gear_featuredimage', 10, 3 );
+add_filter( 'rest_prepare_gear', 'wpd_gear_featuredimage', 10, 3 );
 
 /**
  * Add Category taxonomy for the Gear Custom Post Type
  */
-function gear_category( $data, $post, $request ) {
-	$_data                  = $data->data;
-	$_data['gear_category'] = get_the_term_list( $post->ID, 'gear_category', '', ' ', '' );
-	$data->data             = $_data;
+function wpd_gear_category( $data, $post, $request ) {
+	$_data                      = $data->data;
+	$_data['wpd_gear_category'] = get_the_term_list( $post->ID, 'wpd_gear_category', '', ' ', '' );
+	$data->data                 = $_data;
 	return $data;
 }
-add_filter( 'rest_prepare_gear', 'gear_category', 10, 3 );
+add_filter( 'rest_prepare_gear', 'wpd_gear_category', 10, 3 );
 
 /**
  * This adds the wpdispensary_prices metafields to the
@@ -40,20 +40,20 @@ add_filter( 'rest_prepare_gear', 'gear_category', 10, 3 );
  * @since    1.1.0
  */
 
-add_action( 'rest_api_init', 'slug_register_gear_prices' );
+add_action( 'rest_api_init', 'slug_register_wpd_gear_prices' );
 
 /**
  * Registering Prices
  */
-function slug_register_gear_prices() {
+function slug_register_wpd_gear_prices() {
 	$productsizes = array( '_priceeach', '_priceperpack', '_unitsperpack' );
 	foreach ( $productsizes as $size ) {
 		register_rest_field(
 			array( 'gear' ),
 			$size,
 			array(
-				'get_callback'    => 'slug_get_gear_prices',
-				'update_callback' => 'slug_update_gear_prices',
+				'get_callback'    => 'slug_get_wpd_gear_prices',
+				'update_callback' => 'slug_update_wpd_gear_prices',
 				'schema'          => null,
 			)
 		);
@@ -63,13 +63,13 @@ function slug_register_gear_prices() {
 /**
  * Get Prices
  */
-function slug_get_gear_prices( $object, $field_name, $request ) {
+function slug_get_wpd_gear_prices( $object, $field_name, $request ) {
 	return get_post_meta( $object['id'], $field_name, true );
 }
 
 /**
  * Update Prices
  */
-function slug_update_gear_prices( $value, $object, $field_name ) {
+function slug_update_wpd_gear_prices( $value, $object, $field_name ) {
     return update_post_meta( $object[ 'id' ], $field_name, $value );
 }
