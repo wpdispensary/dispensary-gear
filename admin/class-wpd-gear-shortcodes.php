@@ -271,14 +271,24 @@ function wpdispensary_gear_shortcode( $atts ) {
 			$wpd_shortcode_inside_top = ob_get_contents();
 		ob_end_clean();
 
-		$wpdposts .= '<div class="wpdshortcode wpd-gear ' . $class .'">'. $wpd_shortcode_inside_top .''. $showimage;
+		ob_start();
+			do_action( 'wpd_shortcode_top_gear' );
+			$wpd_shortcode_top_gear = ob_get_contents();
+		ob_end_clean();
+
+		$wpdposts .= '<div class="wpdshortcode wpd-gear ' . $class .'">'. $wpd_shortcode_top_gear .''. $wpd_shortcode_inside_top .''. $showimage;
+
+		ob_start();
+			do_action( 'wpd_shortcode_bottom_gear' );
+			$wpd_shortcode_bottom_gear = ob_get_contents();
+		ob_end_clean();
 
 		ob_start();
 			do_action( 'wpd_shortcode_inside_bottom' );
 			$wpd_shortcode_inside_bottom = ob_get_contents();
 		ob_end_clean();
 
-		$wpdposts .= $showname .''. $showinfo .''. $wpd_shortcode_inside_bottom .'</div>';
+		$wpdposts .= $showname .''. $showinfo .''. $wpd_shortcode_inside_bottom .''. $wpd_shortcode_bottom_gear .'</div>';
 
 	endwhile;
 
