@@ -1,9 +1,9 @@
-=== WP Dispensary's Gear ===
+=== Dispensary Gear ===
 Contributors: deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: dispensary, cannabis, marijuana, ecommerce, wp-dispensary, gear
 Requires at least: 3.0.1
-Tested up to: 4.9.2
+Tested up to: 4.9.4
 Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,6 +24,10 @@ You can display your Dispensary Gear by adding the following shortcode:
 
 `[wpd-gear]`
 
+Full list of options:
+
+`[wpd-gear title="" posts="100" info="show" image="show" imgsize="dispensary-image" class=""]`
+
 You can also display your Gear items by using the Dispensary Gear widget that this plugin adds.
 
 **Contribute**
@@ -36,6 +40,13 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.1.0 =
+* Added in additional action hook in `admin/class-wpd-gear-shortcodes.php`
+* Added new shortcode options in `admin/class-wpd-gear-shortcodes.php`
+* Fixed term name for gear categories in `admin/class-wpd-gear-data-output.php`
+* Fixed term name for gear categories in `admin/class-wpd-gear-widgets.php`
+* Updated image display to include default images in `admin/class-wpd-gear-shortcodes.php`
 
 = 1.0 =
 * Initial release
