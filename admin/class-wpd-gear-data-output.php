@@ -59,6 +59,6 @@ if ( in_array( get_post_type(), array( 'gear' ) ) ) { ?>
 add_action( 'wpd_dataoutput_bottom', 'wpd_gear_categories' );
 function wpd_gear_categories() { ?>
 	<?php if ( in_array( get_post_type(), array( 'gear' ) ) ) { ?>
-		<td><span>Categories:</span></td><td><?php echo get_the_term_list( $post->ID, 'gear_category', '', ', ' ); ?></td>
+		<td><span>Categories:</span></td><td><?php echo get_the_term_list( $post->ID, 'wpd_gear_category', '', ', ' ); ?></td>
 	<?php } ?>
 <?php }
