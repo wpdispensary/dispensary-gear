@@ -46,20 +46,24 @@ function wpdispensary_gear_shortcode( $atts ) {
 		} else {
 			$imagesize = $imgsize;
 		}
+
 		$thumbnail_id        = get_post_thumbnail_id();
 		$thumbnail_url_array = wp_get_attachment_image_src( $thumbnail_id, $imagesize, false );
 		$thumbnail_url       = $thumbnail_url_array[0];
 		$querytitle          = get_the_title();
+
+		$wp_dispensary_options = get_option( 'wp_dispensary_option_name' ); // Array of All Options.
+		if ( ! isset( $wp_dispensary_options['wpd_hide_details'] ) ) {
 			$wpd_hide_details = '';
 		} else {
 			$wpd_hide_details = $wp_dispensary_options['wpd_hide_details'];
 		}
-		if ( !isset( $wp_dispensary_options['wpd_hide_pricing'] ) ) {
+		if ( ! isset( $wp_dispensary_options['wpd_hide_pricing'] ) ) {
 			$wpd_hide_pricing = '';
 		} else {
 			$wpd_hide_pricing = $wp_dispensary_options['wpd_hide_pricing'];
 		}
-		if ( !isset( $wp_dispensary_options['wpd_content_placement'] ) ) {
+		if ( ! isset( $wp_dispensary_options['wpd_content_placement'] ) ) {
 			$wpd_content_placement = '';
 		} else {
 			$wpd_content_placement = $wp_dispensary_options['wpd_content_placement'];
@@ -72,7 +76,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 		if ( null === $wp_dispensary_options['wpd_cost_phrase'] ) {
 			$wpd_cost_phrase = 'Price';
 		} else {
-			$wpd_cost_phrase = $wp_dispensary_options['wpd_cost_phrase']; // costphrase
+			$wpd_cost_phrase = $wp_dispensary_options['wpd_cost_phrase']; // costphrase.
 		}
 
 		$currency_symbols = array(
@@ -213,7 +217,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 			'TMT' => '&#109;',
 			'TND' => '&#1583;.&#1578;',
 			'TOP' => '&#84;&#36;',
-			'TRY' => '&#8356;', // New Turkey Lira (old symbol used)
+			'TRY' => '&#8356;', // New Turkey Lira (old symbol used).
 			'TTD' => '&#36;',
 			'TWD' => '&#78;&#84;&#36;',
 			'TZS' => '',
