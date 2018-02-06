@@ -258,10 +258,20 @@ function wpdispensary_gear_shortcode( $atts ) {
 			}
 		}
 
-		if ( null !== $thumbnail_url ) {
-			$showimage = '<a href="' . get_permalink() . '"><img src="' . $thumbnail_url . '" alt="Menu - '. $querytitle .'" /></a>';
+		if ( 'show' === $image ) {
+			if ( null === $thumbnail_url && 'full' === $imagesize ) {
+				$wpd_shortcodes_default_image = site_url() . '/wp-content/plugins/wp-dispensary/public/images/wpd-large.jpg';
+				$defaultimg                   = apply_filters( 'wpd_shortcodes_default_image', $wpd_shortcodes_default_image );
+				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - Gear" /></a>';
+			} elseif ( null !== $thumbnail_url ) {
+				$showimage = '<a href="' . get_permalink() . '"><img src="' . $thumbnail_url . '" alt="Menu - Gear" /></a>';
+			} else {
+				$wpd_shortcodes_default_image = site_url() . '/wp-content/plugins/wp-dispensary/public/images/' . $imagesize . '.jpg';
+				$defaultimg                   = apply_filters( 'wpd_shortcodes_default_image', $wpd_shortcodes_default_image );
+				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - Gear" /></a>';
+			}
 		} else {
-			$showimage = '<a href="' . get_permalink() . '"><img src="'. site_url() .'/wp-content/plugins/wp-dispensary/public/images/dispensary-image.jpg" alt="Menu - '. $querytitle .'" /></a>';
+			$showimage = '';
 		}
 
 		/** Shortcode display */
