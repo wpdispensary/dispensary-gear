@@ -21,7 +21,9 @@ function wpdispensary_gear_shortcode( $atts ) {
 			'class'		=> '',
 			'name'		=> 'show',
 			'info'		=> 'show',
-			'title'		=> 'Gear'
+			'title'		=> 'Gear',
+			'image'     => 'show',
+			'imgsize'   => 'dispensary-image'
 		),
 		$atts
 	) );
