@@ -39,8 +39,15 @@ function wpdispensary_gear_shortcode( $atts ) {
 
 	while ( $wpdquery->have_posts() ) : $wpdquery->the_post();
 
-		$wp_dispensary_options = get_option( 'wp_dispensary_option_name' ); // Array of All Options
-		if ( !isset( $wp_dispensary_options['wpd_hide_details'] ) ) {
+		if ( '' === $imgsize ) {
+			$imagesize = 'dispensary-image';
+		} else {
+			$imagesize = $imgsize;
+		}
+		$thumbnail_id        = get_post_thumbnail_id();
+		$thumbnail_url_array = wp_get_attachment_image_src( $thumbnail_id, $imagesize, false );
+		$thumbnail_url       = $thumbnail_url_array[0];
+		$querytitle          = get_the_title();
 			$wpd_hide_details = '';
 		} else {
 			$wpd_hide_details = $wp_dispensary_options['wpd_hide_details'];
@@ -227,11 +234,6 @@ function wpdispensary_gear_shortcode( $atts ) {
 			'ZMK' => '&#90;&#75;', // ?
 			'ZWL' => '&#90;&#36;',
 		);
-
-		$thumbnail_id 			= get_post_thumbnail_id();
-		$thumbnail_url_array	= wp_get_attachment_image_src( $thumbnail_id, 'dispensary-image', false );
-		$thumbnail_url			= $thumbnail_url_array[0];
-		$querytitle 			= get_the_title();
 
 		if( get_post_type() == 'gear' ) {
 			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
