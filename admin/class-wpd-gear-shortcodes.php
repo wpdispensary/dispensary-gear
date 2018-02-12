@@ -34,8 +34,8 @@ function wpdispensary_gear_shortcode( $atts ) {
 	 */
 	$wpdquery = new WP_Query(
 		array(
-			'post_type' 		=> 'gear',
-			'posts_per_page'	=> $posts,
+			'post_type'      => 'gear',
+			'posts_per_page' => $posts,
 		)
 	);
 
