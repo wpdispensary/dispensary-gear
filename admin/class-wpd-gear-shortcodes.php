@@ -17,13 +17,13 @@ function wpdispensary_gear_shortcode( $atts ) {
 	/* Attributes */
 	extract( shortcode_atts(
 		array(
-			'posts'		=> '100',
-			'class'		=> '',
-			'name'		=> 'show',
-			'info'		=> 'show',
-			'title'		=> 'Gear',
-			'image'     => 'show',
-			'imgsize'   => 'dispensary-image'
+			'posts'   => '100',
+			'class'   => '',
+			'name'    => 'show',
+			'info'    => 'show',
+			'title'   => 'Gear',
+			'image'   => 'show',
+			'imgsize' => 'dispensary-image',
 		),
 		$atts
 	) );
