@@ -29,7 +29,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 	) );
 
 	/**
-	 * Code to create shortcode for Dispensary Top Sellers
+	 * Code to create shortcode for Dispensary Gear
 	 */
 	$wpdquery = new WP_Query(
 		array(
