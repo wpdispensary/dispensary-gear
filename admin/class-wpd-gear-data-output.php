@@ -41,7 +41,7 @@ add_filter( 'wpd_pricingoutput_after_array', 'wpd_gear_priceoutput' );
  * @since    1.0.0
  */
 
-/** Inventory Data - Flowers */
+/** Gear Price Output */
 add_action( 'wpd_pricingoutput_bottom', 'add_wpd_gear_price_data', 10 );
 function add_wpd_gear_price_data() { ?>
 <?php
@@ -56,6 +56,7 @@ if ( in_array( get_post_type(), array( 'gear' ) ) ) { ?>
 
 } // function
 
+/** Gear Categories Output */
 add_action( 'wpd_dataoutput_bottom', 'wpd_gear_categories' );
 function wpd_gear_categories() { ?>
 	<?php if ( in_array( get_post_type(), array( 'gear' ) ) ) { ?>
