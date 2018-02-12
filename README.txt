@@ -26,7 +26,7 @@ You can display your Dispensary Gear by adding the following shortcode:
 
 Full list of options:
 
-`[wpd-gear title="" posts="100" info="show" image="show" imgsize="dispensary-image" class=""]`
+`[wpd-gear title="" posts="100" info="show" image="show" imgsize="dispensary-image" class="" viewall=""]`
 
 You can also display your Gear items by using the Dispensary Gear widget that this plugin adds.
 
