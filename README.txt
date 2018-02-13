@@ -14,6 +14,10 @@ This plugin adds a Gear menu type to the WP Dispensary menu plugin.
 
 This plugin adds a Gear menu type to the [WP Dispensary](https://www.wpdispensary.com) menu plugin.
 
+**Release Notes**
+
+You can read full details in our [blog post](https://www.wpdispensary.com/dispensary-gear-add-on/).
+
 **Requirements**
 
 When using the Dispensary Gear plugin, [WP Dispensary](https://www.wpdispensary.com) version 1.9.18+ needs to be installed and activated in order make display the `Gear` menu type's pricing and details on individual item pages.
