@@ -33,6 +33,17 @@ add_filter( 'wpd_pricingoutput_end_array', 'wpd_gear_priceoutput' );
 add_filter( 'wpd_pricingoutput_after_array', 'wpd_gear_priceoutput' );
 
 /**
+ * Function to add vendor taxonomy to "Gear" menu type
+ *
+ * @since    1.2.0
+ */
+function wpd_gear_vendor( $array ) {
+    $array[] = 'gear';
+    return $array;
+}
+add_filter( 'wpd_vendor_tax_type', 'wpd_gear_vendor' );
+
+/**
  * Action Hooks
  *
  * This is the file responsible for adding the gear data to menu
