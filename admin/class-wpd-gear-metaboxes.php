@@ -74,7 +74,7 @@ function wpd_gear_prices_save_meta( $post_id, $post ) {
 	 * Verify this came from the our screen and with proper authorization,
 	 * because save_post can be triggered at other times
 	 */
-	if ( ! wp_verify_nonce( $_POST['gearpricesmeta_noncename'], plugin_basename( __FILE__ ) ) ) {
+	if ( ! isset( $_POST['gearpricesmeta_noncename' ] ) || ! wp_verify_nonce( $_POST['gearpricesmeta_noncename'], plugin_basename( __FILE__ ) ) ) {
 		return $post->ID;
 	}
 
