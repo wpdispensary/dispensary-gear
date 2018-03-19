@@ -73,7 +73,9 @@ function wpd_gear_vendors() {
 	global $post;
 ?>
 	<?php if ( in_array( get_post_type(), array( 'gear' ) ) ) { ?>
+	<?php if ( ! get_the_term_list( get_the_ID(), 'vendor', true ) ) { } else { ?>
 		<tr><td><span>Vendors:</span></td><td><?php echo get_the_term_list( $post->ID, 'vendor', '', ', ' ); ?></td></tr>
+	<?php } ?>
 	<?php } ?>
 <?php }
 
@@ -83,6 +85,8 @@ function wpd_gear_categories() {
 	global $post;
 ?>
 	<?php if ( in_array( get_post_type(), array( 'gear' ) ) ) { ?>
+	<?php if ( false != get_the_term_list( $post->ID, 'wpd_gear_category' ) ) { ?>
 		<tr><td><span>Categories:</span></td><td><?php echo get_the_term_list( $post->ID, 'wpd_gear_category', '', ', ' ); ?></td></tr>
+	<?php } else {} ?>
 	<?php } ?>
 <?php }
