@@ -28,7 +28,7 @@ class wpd_gear_widget extends WP_Widget {
 
 		parent::__construct(
 			'wpd_gear_widget',
-			__( 'Recent Gear', 'wp-dispensary' ),
+			__( 'Dispensary Gear', 'wp-dispensary' ),
 			array(
 				'description' => __( 'Your most recent Gear', 'wp-dispensary' ),
 				'classname'   => 'wp-dispensary-widget',
