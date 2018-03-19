@@ -40,7 +40,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 	);
 
 	if ( 'show' === $viewall ) {
-		$gearlink = get_bloginfo( 'home' ) . '/gear/';
+		$gearlink = get_bloginfo( 'url' ) . '/gear/';
 		$viewgear = '<span class="wp-dispensary-view-all"><a href="' . apply_filters( 'wpd_gear_shortcode_view_all', $gearlink ) .'">(view all)</a></span>';
 	} else {
 		$viewgear = '';
