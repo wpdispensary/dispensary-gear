@@ -26,7 +26,8 @@ function wpdispensary_gear_shortcode( $atts ) {
 			'imgsize' => 'dispensary-image',
 			'viewall' => '',
 		),
-		$atts
+		$atts,
+		'wpd_gear'
 	) );
 
 	/**
