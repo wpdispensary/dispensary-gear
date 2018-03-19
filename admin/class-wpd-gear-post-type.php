@@ -20,6 +20,11 @@ if ( ! function_exists( 'wpdispensary_gear' ) ) {
 /** Register Custom Post Type */
 function wpdispensary_gear() {
 
+	/**
+	 * Defining variables
+	 */
+	$rewrite = '';
+
 	$labels = array(
 		'name'                  => _x( 'Gear', 'Post Type General Name', 'wpd-gear' ),
 		'singular_name'         => _x( 'Gear', 'Post Type Singular Name', 'wpd-gear' ),
