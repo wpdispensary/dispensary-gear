@@ -11,7 +11,7 @@
  * Plugin Name:       WP Dispensary's Gear
  * Plugin URI:        https://www.wpdispensary.com/dispensary-gear-add-on
  * Description:       This plugin adds a GEAR menu type to the WP Dispensary menu plugin. Brought to you by <a href="http://www.deviodigital.com/">Devio Digital</a> &amp; <a href="https://www.wpdispensary.com">WP Dispensary</a>.
- * Version:           1.1.0
+ * Version:           1.2.0
  * Author:            WP Dispensary
  * Author URI:        http://www.wpdispensary.com
  * License:           GPL-2.0+
@@ -30,7 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'WPD_GEAR_VERSION', '1.0.0' );
+define( 'WPD_GEAR_VERSION', '1.2.0' );
 
 /**
  * The code that runs during plugin activation.
