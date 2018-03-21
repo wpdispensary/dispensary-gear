@@ -45,6 +45,20 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 
 == Changelog ==
 
+= 1.2.0 =
+* Added `viewall` shortcode option (req: WPD 1.9.18+) in `admin/class-wpd-gear-shortcodes.php`
+* Added vendor taxonomy filter and display in `admin/class-wpd-gear-data-output.php`
+* Added check to hide vendors and categories if empty in `admin/class-wpd-gear-data-output.php`
+* Added `wpd_gear` shortcode name for attribute filter in `admin/class-wpd-gear-shortcodes.php`
+* Fixed display bug for price outputs in `admin/class-wpd-gear-shortcodes.php`
+* Fixed depreciated string value in get_bloginfo function in `admin/class-wpd-gear-shortcodes.php`
+* Fixed nonce error for gearpricesmeta_noncename in `admin/class-wpd-gear-metaboxes.php`
+* Fixed `WP_DEBUG` notice by adding a default value for $rewrite variable in `admin/class-wpd-gear-post-type.php`
+* Fixed `WP_DEBUG` notice by adding `global $post` to Gear vendors and categories in `admin/class-wpd-gear-data-output.php`
+* Updated admin menu order for `Gear` in `admin/class-wpd-gear-post-type.php`
+* Updated categories table code for display in `admin/class-wpd-gear-data-output.php`
+* Updated default widget title from `Recent Gear` to `Dispensary Gear` in `admin/class-wpd-gear-widgets.php`
+
 = 1.1.0 =
 * Added in additional action hook in `admin/class-wpd-gear-shortcodes.php`
 * Added new shortcode options in `admin/class-wpd-gear-shortcodes.php`
