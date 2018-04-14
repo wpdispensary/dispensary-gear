@@ -84,4 +84,4 @@ add_action( 'init', 'wpdispensary_gear', 0 );
 function wpd_gear_add_admin_menu() {
 	add_submenu_page( 'wpd-settings', 'WP Dispensary\'s Gear', 'Gear', 'manage_options', 'edit.php?post_type=gear', NULL );
 }
-add_action( 'admin_menu', 'wpd_gear_add_admin_menu', 12 );
+add_action( 'admin_menu', 'wpd_gear_add_admin_menu', 8 );
