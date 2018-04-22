@@ -70,7 +70,7 @@ class WPD_Gear {
 		if ( defined( 'WPD_GEAR_VERSION' ) ) {
 			$this->version = WPD_GEAR_VERSION;
 		} else {
-			$this->version = '1.2.0';
+			$this->version = '1.2.1';
 		}
 		$this->plugin_name = 'wpd-gear';
 

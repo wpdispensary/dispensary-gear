@@ -1,10 +1,10 @@
 === Dispensary Gear ===
 Contributors: deviodigital
 Donate link: https://www.wpdispensary.com
-Tags: dispensary, cannabis, marijuana, ecommerce, wp-dispensary, gear
+Tags: weed, dispensary, cannabis, marijuana, wp-dispensary, ecommerce, gear
 Requires at least: 3.0.1
-Tested up to: 4.9.4
-Stable tag: 1.2.0
+Tested up to: 4.9.5
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,10 +40,15 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 
 == Installation ==
 
-1. In your WordPress admin dashboard, go to `Plugins` -> `Add New` and search for **Dispensary Gear** 
+1. In your WordPress admin dashboard, go to `Plugins` -> `Add New` and search for **Dispensary Gear**
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.2.1 =
+* Added custom widths to the Prices metabox input fields in `admin/class-wpd-gear-metaboxes.php`
+* Added filter for the new table placement in **WP Dispensary v2.0+** in `admin/class-wpd-gear-data-output.php`
+* Updated admin submenu order number in `admin/wpd-gear-post-type.php`
 
 = 1.2.0 =
 * Added `viewall` shortcode option (req: WPD 1.9.18+) in `admin/class-wpd-gear-shortcodes.php`
