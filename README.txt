@@ -1,5 +1,5 @@
 === Dispensary Gear ===
-Contributors: deviodigital
+Contributors: deviodigital, wpdispensary
 Donate link: https://www.wpdispensary.com
 Tags: weed, dispensary, cannabis, marijuana, wp-dispensary, ecommerce, gear
 Requires at least: 3.0.1
