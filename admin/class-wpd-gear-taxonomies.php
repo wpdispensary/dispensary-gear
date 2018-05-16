@@ -26,17 +26,17 @@ add_action( 'init', 'wpdispensary_gearcategory', 0 );
 function wpdispensary_gearcategory() {
 
 	$labels = array(
-		'name'              => _x( 'Gear Categories', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Gear Category', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Gear Categories' ),
-		'all_items'         => __( 'All Gear Categories' ),
-		'parent_item'       => __( 'Parent Gear Category' ),
-		'parent_item_colon' => __( 'Parent Gear Category:' ),
-		'edit_item'         => __( 'Edit Gear Category' ),
-		'update_item'       => __( 'Update Gear Category' ),
-		'add_new_item'      => __( 'Add New Gear Category' ),
-		'new_item_name'     => __( 'New Gear Category Name' ),
-		'not_found'         => 'No gear categories found',
+		'name'              => _x( 'Categories', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Categories' ),
+		'all_items'         => __( 'All Categories' ),
+		'parent_item'       => __( 'Parent Category' ),
+		'parent_item_colon' => __( 'Parent Category:' ),
+		'edit_item'         => __( 'Edit Category' ),
+		'update_item'       => __( 'Update Category' ),
+		'add_new_item'      => __( 'Add New Category' ),
+		'new_item_name'     => __( 'New Category Name' ),
+		'not_found'         => 'No categories found',
 		'menu_name'         => __( 'Categories' ),
 	);
 
