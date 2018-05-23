@@ -36,7 +36,7 @@ add_filter( 'rest_prepare_gear', 'wpd_gear_category', 10, 3 );
 /**
  * Add 'categories' endpoint for the Gear Custom Post Type
  *
- * @since 2.1
+ * @since 1.3
  */
 function wpd_gear_category_numbers( $data, $post, $request ) {
 
