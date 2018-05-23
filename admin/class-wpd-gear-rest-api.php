@@ -34,6 +34,29 @@ function wpd_gear_category( $data, $post, $request ) {
 add_filter( 'rest_prepare_gear', 'wpd_gear_category', 10, 3 );
 
 /**
+ * Add 'categories' endpoint for the Gear Custom Post Type
+ *
+ * @since 2.1
+ */
+function wpd_gear_category_numbers( $data, $post, $request ) {
+
+	$_data = $data->data;
+	$items = wp_get_post_terms( $post->ID, 'wpd_gear_category' );
+
+	foreach ( $items as $item=>$value ) {
+		$_data['categories'][$item]['id']          = $value->term_id;
+		$_data['categories'][$item]['slug']        = $value->slug;
+		$_data['categories'][$item]['title']       = $value->name;
+		$_data['categories'][$item]['description'] = $value->description;
+		$_data['categories'][$item]['count']       = $value->count;
+	}
+
+	$data->data = $_data;
+	return $data;
+}
+add_filter( 'rest_prepare_gear', 'wpd_gear_category_numbers', 10, 3 );
+
+/**
  * This adds the wpdispensary_prices metafields to the
  * API callback for gear
  *
