@@ -4,7 +4,7 @@ Donate link: https://www.wpdispensary.com
 Tags: weed, dispensary, cannabis, marijuana, wp-dispensary, ecommerce, gear
 Requires at least: 3.0.1
 Tested up to: 4.9.6
-Stable tag: 1.2.1
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,13 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.3 =
+* Add admin screen thumbnails to Gear menu type in `admin/class-wpd-gear-post-type.php`
+* Add `categories` endpoint to the REST API in `admin/class-wpd-gear-rest-api.php`
+* Remove `wpd_gear_category` REST API endpoint in `admin/class-wpd-gear-post-type.php`
+* Update Gear category wording in `admin/class-wpd-gear-taxonomies.php`
+* Update `gear_category` endpoint name in `admin/class-wpd-gear-rest-api.php`
 
 = 1.2.1 =
 * Added custom widths to the Prices metabox input fields in `admin/class-wpd-gear-metaboxes.php`
