@@ -20,10 +20,21 @@ if ( ! function_exists( 'wpdispensary_gear' ) ) {
 /** Register Custom Post Type */
 function wpdispensary_gear() {
 
+	$wpd_gear_slug = get_option( 'wpd_gear_slug' );
+
+	if ( '' == $wpd_gear_slug ) {
+		$wpd_gear_slug = 'gear';
+	}
+
 	/**
 	 * Defining variables
 	 */
-	$rewrite = '';
+	$rewrite = array(
+		'slug'       => $wpd_gear_slug,
+		'with_front' => true,
+		'pages'      => true,
+		'feeds'      => true,
+	);
 
 	$labels = array(
 		'name'                  => _x( 'Gear', 'Post Type General Name', 'wpd-gear' ),

@@ -157,6 +157,11 @@ class WPD_Gear {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-widgets.php';
 
+		/**
+		 * The class responsible for creating custom permalinks
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-settings.php';
+
 		$this->loader = new WPD_Gear_Loader();
 
 	}
