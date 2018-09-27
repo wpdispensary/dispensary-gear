@@ -20,11 +20,16 @@ if ( ! function_exists( 'wpdispensary_gear' ) ) {
 /** Register Custom Post Type */
 function wpdispensary_gear() {
 
+	// Get permalink base for Gear.
 	$wpd_gear_slug = get_option( 'wpd_gear_slug' );
 
+	// If custom base is empty, set default.
 	if ( '' == $wpd_gear_slug ) {
 		$wpd_gear_slug = 'gear';
 	}
+
+	// Capitalize first letter of new slug.
+	$wpd_gear_slug_cap = ucfirst( $wpd_gear_slug );
 
 	/**
 	 * Defining variables
@@ -37,35 +42,35 @@ function wpdispensary_gear() {
 	);
 
 	$labels = array(
-		'name'                  => _x( 'Gear', 'Post Type General Name', 'wpd-gear' ),
-		'singular_name'         => _x( 'Gear', 'Post Type Singular Name', 'wpd-gear' ),
-		'menu_name'             => __( 'Gear', 'wpd-gear' ),
-		'name_admin_bar'        => __( 'Gear', 'wpd-gear' ),
-		'archives'              => __( 'Gear Archives', 'wpd-gear' ),
-		'parent_item_colon'     => __( 'Parent Gear:', 'wpd-gear' ),
-		'all_items'             => __( 'All Gear', 'wpd-gear' ),
-		'add_new_item'          => __( 'Add New Gear', 'wpd-gear' ),
+		'name'                  => _x( $wpd_gear_slug_cap, 'Post Type General Name', 'wpd-gear' ),
+		'singular_name'         => _x( $wpd_gear_slug_cap, 'Post Type Singular Name', 'wpd-gear' ),
+		'menu_name'             => __( $wpd_gear_slug_cap, 'wpd-gear' ),
+		'name_admin_bar'        => __( $wpd_gear_slug_cap, 'wpd-gear' ),
+		'archives'              => __( $wpd_gear_slug_cap . ' Archives', 'wpd-gear' ),
+		'parent_item_colon'     => __( 'Parent ' . $wpd_gear_slug_cap . ':', 'wpd-gear' ),
+		'all_items'             => __( 'All ' . $wpd_gear_slug_cap, 'wpd-gear' ),
+		'add_new_item'          => __( 'Add New ' . $wpd_gear_slug_cap, 'wpd-gear' ),
 		'add_new'               => __( 'Add New', 'wpd-gear' ),
-		'new_item'              => __( 'New Gear', 'wpd-gear' ),
-		'edit_item'             => __( 'Edit Gear', 'wpd-gear' ),
-		'update_item'           => __( 'Update Gear', 'wpd-gear' ),
-		'view_item'             => __( 'View Gear', 'wpd-gear' ),
-		'search_items'          => __( 'Search Gear', 'wpd-gear' ),
+		'new_item'              => __( 'New ' . $wpd_gear_slug_cap, 'wpd-gear' ),
+		'edit_item'             => __( 'Edit ' . $wpd_gear_slug_cap, 'wpd-gear' ),
+		'update_item'           => __( 'Update ' . $wpd_gear_slug_cap, 'wpd-gear' ),
+		'view_item'             => __( 'View ' . $wpd_gear_slug_cap, 'wpd-gear' ),
+		'search_items'          => __( 'Search '. $wpd_gear_slug_cap, 'wpd-gear' ),
 		'not_found'             => __( 'Not found', 'wpd-gear' ),
 		'not_found_in_trash'    => __( 'Not found in Trash', 'wpd-gear' ),
 		'featured_image'        => __( 'Featured Image', 'wpd-gear' ),
 		'set_featured_image'    => __( 'Set featured image', 'wpd-gear' ),
 		'remove_featured_image' => __( 'Remove featured image', 'wpd-gear' ),
 		'use_featured_image'    => __( 'Use as featured image', 'wpd-gear' ),
-		'insert_into_item'      => __( 'Insert into Gear', 'wpd-gear' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this Gear', 'wpd-gear' ),
-		'items_list'            => __( 'Gear list', 'wpd-gear' ),
-		'items_list_navigation' => __( 'Gear list navigation', 'wpd-gear' ),
-		'filter_items_list'     => __( 'Filter gear list', 'wpd-gear' ),
+		'insert_into_item'      => __( 'Insert into ' . $wpd_gear_slug_cap, 'wpd-gear' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this ' . $wpd_gear_slug_cap, 'wpd-gear' ),
+		'items_list'            => __( $wpd_gear_slug_cap . ' list', 'wpd-gear' ),
+		'items_list_navigation' => __( $wpd_gear_slug_cap . ' list navigation', 'wpd-gear' ),
+		'filter_items_list'     => __( 'Filter ' . $wpd_gear_slug . ' list', 'wpd-gear' ),
 	);
 	$args = array(
-		'label'               => __( 'Gear', 'wpd-gear' ),
-		'description'         => __( 'Display your dispensary gear', 'wpd-gear' ),
+		'label'               => __( $wpd_gear_slug_cap, 'wpd-gear' ),
+		'description'         => __( 'Display the ' . $wpd_gear_slug . ' from your menu', 'wpd-gear' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'thumbnail', ),
 		'taxonomies'          => array( ),
@@ -93,7 +98,19 @@ add_action( 'init', 'wpdispensary_gear', 0 );
 }
 
 function wpd_gear_add_admin_menu() {
-	add_submenu_page( 'wpd-settings', 'WP Dispensary\'s Gear', 'Gear', 'manage_options', 'edit.php?post_type=gear', NULL );
+
+	// Get permalink base for Gear.
+	$wpd_gear_slug = get_option( 'wpd_gear_slug' );
+
+	// If custom base is empty, set default.
+	if ( '' == $wpd_gear_slug ) {
+		$wpd_gear_slug = 'gear';
+	}
+
+	// Capitalize first letter of new slug.
+	$wpd_gear_slug_cap = ucfirst( $wpd_gear_slug );
+
+	add_submenu_page( 'wpd-settings', 'WP Dispensary\'s ' . $wpd_gear_slug_cap, $wpd_gear_slug_cap, 'manage_options', 'edit.php?post_type=gear', NULL );
 }
 add_action( 'admin_menu', 'wpd_gear_add_admin_menu', 8 );
 

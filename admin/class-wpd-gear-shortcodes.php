@@ -13,6 +13,16 @@
  * Gear Shortcode Fuction
  */
 function wpdispensary_gear_shortcode( $atts ) {
+	// Get permalink base for Gear.
+	$wpd_gear_slug = get_option( 'wpd_gear_slug' );
+
+	// If custom base is empty, set default.
+	if ( '' == $wpd_gear_slug ) {
+		$wpd_gear_slug = 'gear';
+	}
+
+	// Capitalize first letter of new slug.
+	$wpd_gear_slug_cap = ucfirst( $wpd_gear_slug );
 
 	/* Attributes */
 	extract( shortcode_atts(
@@ -21,7 +31,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 			'class'   => '',
 			'name'    => 'show',
 			'info'    => 'show',
-			'title'   => 'Gear',
+			'title'   => $wpd_gear_slug_cap,
 			'image'   => 'show',
 			'imgsize' => 'dispensary-image',
 			'viewall' => '',
@@ -284,13 +294,13 @@ function wpdispensary_gear_shortcode( $atts ) {
 			if ( null === $thumbnail_url && 'full' === $imagesize ) {
 				$wpd_shortcodes_default_image = site_url() . '/wp-content/plugins/wp-dispensary/public/images/wpd-large.jpg';
 				$defaultimg                   = apply_filters( 'wpd_shortcodes_default_image', $wpd_shortcodes_default_image );
-				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - Gear" /></a>';
+				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - ' . $wpd_gear_slug_cap . '" /></a>';
 			} elseif ( null !== $thumbnail_url ) {
-				$showimage = '<a href="' . get_permalink() . '"><img src="' . $thumbnail_url . '" alt="Menu - Gear" /></a>';
+				$showimage = '<a href="' . get_permalink() . '"><img src="' . $thumbnail_url . '" alt="Menu - ' . $wpd_gear_slug_cap . '" /></a>';
 			} else {
 				$wpd_shortcodes_default_image = site_url() . '/wp-content/plugins/wp-dispensary/public/images/' . $imagesize . '.jpg';
 				$defaultimg                   = apply_filters( 'wpd_shortcodes_default_image', $wpd_shortcodes_default_image );
-				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - Gear" /></a>';
+				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - ' . $wpd_gear_slug_cap . '" /></a>';
 			}
 		} else {
 			$showimage = '';

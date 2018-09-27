@@ -25,12 +25,22 @@ class wpd_gear_widget extends WP_Widget {
 	 * @return      void
 	 */
 	public function __construct() {
+		// Get permalink base for Gear.
+		$wpd_gear_slug = get_option( 'wpd_gear_slug' );
+
+		// If custom base is empty, set default.
+		if ( '' == $wpd_gear_slug ) {
+			$wpd_gear_slug = 'gear';
+		}
+
+		// Capitalize first letter of new slug.
+		$wpd_gear_slug_cap = ucfirst( $wpd_gear_slug );
 
 		parent::__construct(
 			'wpd_gear_widget',
-			__( 'Dispensary Gear', 'wp-dispensary' ),
+			__( 'Dispensary ' . $wpd_gear_slug_cap, 'wpd-gear' ),
 			array(
-				'description' => __( 'Your most recent Gear', 'wp-dispensary' ),
+				'description' => __( 'Your most recent ' . $wpd_gear_slug, 'wpd-gear' ),
 				'classname'   => 'wp-dispensary-widget',
 			)
 		);
@@ -162,8 +172,19 @@ class wpd_gear_widget extends WP_Widget {
 	 * @return      void
 	 */
 	public function form( $instance ) {
+		// Get custom permalink base for Gear.
+		$wpd_gear_slug = get_option( 'wpd_gear_slug' );
+
+		// If custom base is empty, set default.
+		if ( '' == $wpd_gear_slug ) {
+			$wpd_gear_slug = 'gear';
+		}
+
+		// Capitalize first letter of new slug.
+		$wpd_gear_slug_cap = ucfirst( $wpd_gear_slug );
+
 		$defaults = array(
-			'title'          => 'Recent Gear',
+			'title'          => 'Recent ' . $wpd_gear_slug_cap,
 			'limit'          => '5',
 			'order'          => '',
 			'featuredimage'  => '',
