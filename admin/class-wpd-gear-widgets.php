@@ -189,44 +189,44 @@ class wpd_gear_widget extends WP_Widget {
 			'order'          => '',
 			'featuredimage'  => '',
 			'imagesize'      => 'wpdispensary-widget',
-			'gearname'     => '',
-			'gearcategory' => '',
+			'gearname'       => '',
+			'gearcategory'   => '',
 		);
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
 	?>
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Widget Title:', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Widget Title:', 'wpd-gear' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_html( $instance['title'] ); ?>" />
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"><?php esc_html_e( 'Amount of gear to show:', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"><?php esc_html_e( 'Amount of ' . $wpd_gear_slug . ' to show:', 'wpd-gear' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>" type="number" name="<?php echo esc_attr( $this->get_field_name( 'limit' ) ); ?>" min="1" max="999" value="<?php echo esc_html( $instance['limit'] ); ?>" />
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['order'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'order' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>"><?php esc_html_e( 'Randomize output?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>"><?php esc_html_e( 'Randomize output?', 'wpd-gear' ); ?></label>
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['gearname'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'gearname' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'gearname' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'gearname' ) ); ?>"><?php esc_html_e( 'Display gear name?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'gearname' ) ); ?>"><?php esc_html_e( 'Display ' . $wpd_gear_slug . ' name?', 'wpd-gear' ); ?></label>
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['gearcategory'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'gearcategory' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'gearcategory' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'gearcategory' ) ); ?>"><?php esc_html_e( 'Display gear category?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'gearcategory' ) ); ?>"><?php esc_html_e( 'Display ' . $wpd_gear_slug . ' category?', 'wpd-gear' ); ?></label>
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['featuredimage'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'featuredimage' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'featuredimage' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'featuredimage' ) ); ?>"><?php esc_html_e( 'Display featured image?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'featuredimage' ) ); ?>"><?php esc_html_e( 'Display featured image?', 'wpd-gear' ); ?></label>
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'imagesize' ) ); ?>"><?php esc_html_e( 'Image size:', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'imagesize' ) ); ?>"><?php esc_html_e( 'Image size:', 'wpd-gear' ); ?></label>
 		<?php
 			$terms = array( 'wpdispensary-widget', 'dispensary-image', 'wpd-small', 'wpd-medium', 'wpd-large' );
 		if ( $terms ) {
