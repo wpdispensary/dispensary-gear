@@ -42,35 +42,35 @@ function wpdispensary_gear() {
 	);
 
 	$labels = array(
-		'name'                  => _x( $wpd_gear_slug_cap, 'Post Type General Name', 'wpd-gear' ),
-		'singular_name'         => _x( $wpd_gear_slug_cap, 'Post Type Singular Name', 'wpd-gear' ),
-		'menu_name'             => __( $wpd_gear_slug_cap, 'wpd-gear' ),
-		'name_admin_bar'        => __( $wpd_gear_slug_cap, 'wpd-gear' ),
-		'archives'              => __( $wpd_gear_slug_cap . ' Archives', 'wpd-gear' ),
-		'parent_item_colon'     => __( 'Parent ' . $wpd_gear_slug_cap . ':', 'wpd-gear' ),
-		'all_items'             => __( 'All ' . $wpd_gear_slug_cap, 'wpd-gear' ),
-		'add_new_item'          => __( 'Add New ' . $wpd_gear_slug_cap, 'wpd-gear' ),
+		'name'                  => sprintf( esc_html__( '%s', 'Post Type General Name', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'singular_name'         => sprintf( esc_html__( '%s', 'Post Type Singular Name', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'menu_name'             => sprintf( esc_html__( '%s', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'name_admin_bar'        => sprintf( esc_html__( '%s', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'archives'              => sprintf( esc_html__( '%s Archives', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'parent_item_colon'     => sprintf( esc_html__( 'Parent %s:', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'all_items'             => sprintf( esc_html__( 'All %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'add_new_item'          => sprintf( esc_html__( 'Add New %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
 		'add_new'               => __( 'Add New', 'wpd-gear' ),
-		'new_item'              => __( 'New ' . $wpd_gear_slug_cap, 'wpd-gear' ),
-		'edit_item'             => __( 'Edit ' . $wpd_gear_slug_cap, 'wpd-gear' ),
-		'update_item'           => __( 'Update ' . $wpd_gear_slug_cap, 'wpd-gear' ),
-		'view_item'             => __( 'View ' . $wpd_gear_slug_cap, 'wpd-gear' ),
-		'search_items'          => __( 'Search '. $wpd_gear_slug_cap, 'wpd-gear' ),
+		'new_item'              => sprintf( esc_html__( 'New %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'edit_item'             => sprintf( esc_html__( 'Edit %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'update_item'           => sprintf( esc_html__( 'Update %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'view_item'             => sprintf( esc_html__( 'View %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'search_items'          => sprintf( esc_html__( 'Search %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
 		'not_found'             => __( 'Not found', 'wpd-gear' ),
 		'not_found_in_trash'    => __( 'Not found in Trash', 'wpd-gear' ),
 		'featured_image'        => __( 'Featured Image', 'wpd-gear' ),
 		'set_featured_image'    => __( 'Set featured image', 'wpd-gear' ),
 		'remove_featured_image' => __( 'Remove featured image', 'wpd-gear' ),
 		'use_featured_image'    => __( 'Use as featured image', 'wpd-gear' ),
-		'insert_into_item'      => __( 'Insert into ' . $wpd_gear_slug_cap, 'wpd-gear' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this ' . $wpd_gear_slug_cap, 'wpd-gear' ),
-		'items_list'            => __( $wpd_gear_slug_cap . ' list', 'wpd-gear' ),
-		'items_list_navigation' => __( $wpd_gear_slug_cap . ' list navigation', 'wpd-gear' ),
-		'filter_items_list'     => __( 'Filter ' . $wpd_gear_slug . ' list', 'wpd-gear' ),
+		'insert_into_item'      => sprintf( esc_html__( 'Insert into %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'uploaded_to_this_item' => sprintf( esc_html__( 'Uploaded to this %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'items_list'            => sprintf( esc_html__( '%s list', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'items_list_navigation' => sprintf( esc_html__( '%s list navigation', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'filter_items_list'     => sprintf( esc_html__( 'Filter %s list', 'wpd-gear' ), $wpd_gear_slug ),
 	);
 	$args = array(
-		'label'               => __( $wpd_gear_slug_cap, 'wpd-gear' ),
-		'description'         => __( 'Display the ' . $wpd_gear_slug . ' from your menu', 'wpd-gear' ),
+		'label'               => sprintf( esc_html__( '%s', 'wpd-gear' ), $wpd_gear_slug_cap ),
+		'description'         => sprintf( esc_html__( 'Display the %s from your menu', 'wpd-gear' ), $wpd_gear_slug ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'thumbnail', ),
 		'taxonomies'          => array( ),
@@ -110,7 +110,7 @@ function wpd_gear_add_admin_menu() {
 	// Capitalize first letter of new slug.
 	$wpd_gear_slug_cap = ucfirst( $wpd_gear_slug );
 
-	add_submenu_page( 'wpd-settings', 'WP Dispensary\'s ' . $wpd_gear_slug_cap, $wpd_gear_slug_cap, 'manage_options', 'edit.php?post_type=gear', NULL );
+	add_submenu_page( 'wpd-settings', sprintf( esc_html__( 'WP Dispensary\'s %s' ), $wpd_gear_slug_cap ), sprintf( esc_html__( '%s' ), $wpd_gear_slug_cap ), 'manage_options', 'edit.php?post_type=gear', NULL );
 }
 add_action( 'admin_menu', 'wpd_gear_add_admin_menu', 8 );
 
