@@ -52,7 +52,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 
 	if ( 'show' === $viewall ) {
 		$gearlink = get_bloginfo( 'url' ) . '/gear/';
-		$viewgear = '<span class="wp-dispensary-view-all"><a href="' . apply_filters( 'wpd_gear_shortcode_view_all', $gearlink ) .'">(view all)</a></span>';
+		$viewgear = '<span class="wp-dispensary-view-all"><a href="' . apply_filters( 'wpd_gear_shortcode_view_all', $gearlink ) .'">' . __( '(view all)', 'wp-dispensary' ) . '</a></span>';
 	} else {
 		$viewgear = '';
 	}
@@ -90,7 +90,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 				$pricingeach = '';
 			}
 			if ( get_post_meta( get_the_ID(), '_priceperpack', true ) ) {
-				$pricingperpack = ' &middot; ' . get_post_meta( get_the_id(), '_unitsperpack', true ) . ' for ' . wpd_currency_code() . '' . get_post_meta( get_the_id(), '_priceperpack', true );
+				$pricingperpack = ' &middot; ' . get_post_meta( get_the_id(), '_unitsperpack', true ) . ' ' . __( 'for', 'wp-dispensary' ) . ' ' . wpd_currency_code() . '' . get_post_meta( get_the_id(), '_priceperpack', true );
 			} else {
 				$pricingperpack = '';
 			}

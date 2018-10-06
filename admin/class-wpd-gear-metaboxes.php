@@ -53,19 +53,19 @@ function wpd_gear_prices() {
 
 	/** Echo out the fields */
 	echo '<div class="gearbox">';
-	echo '<p>Price per unit:</p>';
+	echo '<p>' . __( 'Price per unit:', 'wp-dispensary' ) . '</p>';
 	echo '<input type="text" name="_priceeach" value="' . esc_html( $priceeach ) . '" class="widefat" />';
 	echo '</div>';
 
 	/** Echo out the fields */
 	echo '<div class="gearbox">';
-	echo '<p>Price per pack:</p>';
+	echo '<p>' . __( 'Price per pack:', 'wp-dispensary' ) . '</p>';
 	echo '<input type="text" name="_priceperpack" value="' . esc_html( $priceperpack ) . '" class="widefat" />';
 	echo '</div>';
 
 	/** Echo out the fields */
 	echo '<div class="gearbox">';
-	echo '<p>Units per pack:</p>';
+	echo '<p>' . __( 'Units per pack:', 'wp-dispensary' ) . '</p>';
 	echo '<input type="number" name="_unitsperpack" value="' . esc_html( $unitsperpack ) . '" class="widefat" />';
 	echo '</div>';
 
