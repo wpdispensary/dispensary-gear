@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Dispensary's Gear\n"
-"POT-Creation-Date: 2018-09-30 23:09-0400\n"
-"PO-Revision-Date: 2018-09-30 23:09-0400\n"
+"POT-Creation-Date: 2018-10-06 00:46-0400\n"
+"PO-Revision-Date: 2018-10-06 00:45-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,8 +21,36 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
+#: admin/class-wpd-gear-data-output.php:62
+msgid "Price:"
+msgstr ""
+
+#: admin/class-wpd-gear-data-output.php:65
+msgid "per pack"
+msgstr ""
+
+#: admin/class-wpd-gear-data-output.php:78
+msgid "Vendors:"
+msgstr ""
+
+#: admin/class-wpd-gear-data-output.php:90
+msgid "Categories:"
+msgstr ""
+
 #: admin/class-wpd-gear-metaboxes.php:27
 msgid "Product Pricing"
+msgstr ""
+
+#: admin/class-wpd-gear-metaboxes.php:56
+msgid "Price per unit:"
+msgstr ""
+
+#: admin/class-wpd-gear-metaboxes.php:62
+msgid "Price per pack:"
+msgstr ""
+
+#: admin/class-wpd-gear-metaboxes.php:68
+msgid "Units per pack:"
 msgstr ""
 
 #: admin/class-wpd-gear-post-type.php:45 admin/class-wpd-gear-post-type.php:46
@@ -142,6 +170,22 @@ msgstr ""
 
 #: admin/class-wpd-gear-settings.php:33
 msgid "Gear Base"
+msgstr ""
+
+#: admin/class-wpd-gear-shortcodes.php:55
+msgid "(view all)"
+msgstr ""
+
+#: admin/class-wpd-gear-shortcodes.php:81
+msgid "Donation"
+msgstr ""
+
+#: admin/class-wpd-gear-shortcodes.php:83
+msgid "Price"
+msgstr ""
+
+#: admin/class-wpd-gear-shortcodes.php:93
+msgid "for"
 msgstr ""
 
 #: admin/class-wpd-gear-taxonomies.php:29
