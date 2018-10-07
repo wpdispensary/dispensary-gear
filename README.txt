@@ -4,7 +4,7 @@ Donate link: https://www.wpdispensary.com
 Tags: weed, dispensary, cannabis, marijuana, wp-dispensary, ecommerce, gear
 Requires at least: 3.0.1
 Tested up to: 4.9.8
-Stable tag: 1.4
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,19 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.5 =
+* Updated `Gear` display text to change based on custom permalink base in `admin/class-wpd-gear-post-type.php`
+* Updated `Gear` display text to change based on custom permalink base in `admin/class-wpd-gear-shortcodes.php`
+* Updated `Gear` display text to change based on custom permalink base in `admin/class-wpd-gear-widgets.php`
+* Updated translatable text to work with variable in `admin/class-wpd-gear-post-type.php`
+* Updated translatable text to work with variable in `admin/class-wpd-gear-post-type.php`
+* Updated shortcode to use the `wpd_currency_code` function in `admin/class-wpd-gear-shortcodes.php`
+* Updated Price/Donation display option updates in `admin/class-wpd-gear-shortcodes.php`
+* Updated various text strings to be translatable in `admin/class-wpd-gear-data-output.php`
+* Updated various text strings to be translatable in `admin/class-wpd-gear-metaboxes.php`
+* Updated various text strings to be translatable in `admin/class-wpd-gear-shortcodes.php`
+* Updated `.pot` file with new text strings for localization in `languages/wpd-gear.pot`
 
 = 1.4 =
 * Added `.pot` file for localization in `languages/wpd-gear.pot`
