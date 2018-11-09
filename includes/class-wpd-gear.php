@@ -162,6 +162,13 @@ class WPD_Gear {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-gear-settings.php';
 
+		/**
+		 * Adding in custom helper functions that are used throughout the rest of the plugin
+		 *
+		 * @since    1.6
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/wpd-gear-functions.php';
+
 		$this->loader = new WPD_Gear_Loader();
 
 	}
