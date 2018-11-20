@@ -93,6 +93,9 @@ class wpd_gear_widget extends WP_Widget {
 		);
 
 		while ( $wpd_gear_widget->have_posts() ) :
+
+			do_action( 'wpd_gear_widget_inside_loop_before' );
+
 			$wpd_gear_widget->the_post();
 
 			$do_not_duplicate = $post->ID;
@@ -122,6 +125,8 @@ class wpd_gear_widget extends WP_Widget {
 				echo '</li>';
 
 			}
+
+			do_action( 'wpd_gear_widget_inside_loop_after' );
 
 		endwhile; // End loop.
 
