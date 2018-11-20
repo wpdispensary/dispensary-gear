@@ -45,6 +45,12 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 
 == Changelog ==
 
+= 1.6 =
+* Added 2 helper functions `get_wpd_gear_prices_simple` and `wpd_gear_prices_simple` in `admin/wpd-gear-functions.php`
+* Added 2 action hooks `wpd_gear_widget_inside_loop_before` and `wpd_gear_widget_inside_loop_before` in `admin/class-wpd-gear-widgets.php`
+* Updated shortcode to use the new prices helper functions in `admin/class-wpd-gear-shortcode.php`
+* Updated text for admin `post_updated_messages` in `admin/class-wpd-gear-post-type.php`
+
 = 1.5 =
 * Updated `Gear` display text to change based on custom permalink base in `admin/class-wpd-gear-post-type.php`
 * Updated `Gear` display text to change based on custom permalink base in `admin/class-wpd-gear-shortcodes.php`
