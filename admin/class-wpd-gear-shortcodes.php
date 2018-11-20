@@ -77,7 +77,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 
 		if( get_post_type() == 'gear' ) {
 			// Price.
-			$gearpricing = '<span class="wpd-productinfo pricing"><strong>' . wpd_pricing_phrase( $singular = true ) . ':</strong> ' . wpd_gear_prices_simple() . '</span>';
+			$gearpricing = get_wpd_gear_prices_simple( NULL, TRUE );
 		}
 
 		/** Check shortcode options input by user */
@@ -90,7 +90,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 
 		if( get_post_type() == 'gear' ) {
 			if ( $info == "show" ) {
-				$showinfo = '<span class="wpd-productinfo">' . $gearpricing . '</span>';
+				$showinfo = $gearpricing;
 			} else {
 				$showinfo = '';
 			}
