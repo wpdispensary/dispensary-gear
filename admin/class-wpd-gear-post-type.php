@@ -124,3 +124,41 @@ function wpd_gear_admin_screen_thumbnails( $array ) {
     return $array;
 }
 add_filter( 'wpd_admin_screen_thumbnails', 'wpd_gear_admin_screen_thumbnails' );
+
+/**
+ * Update messages for Gear.
+ * 
+ * @since 1.6
+ */
+function wpd_gear_updated_messages( $messages ) {
+    if ( 'gear' === get_post_type() ) {
+		// Get permalink base for Gear.
+		$wpd_gear_slug = get_option( 'wpd_gear_slug' );
+
+		// If custom base is empty, set default.
+		if ( '' == $wpd_gear_slug ) {
+			$wpd_gear_slug = 'gear';
+		}
+
+		// Capitalize first letter of new slug.
+		$wpd_gear_slug_cap = ucfirst( $wpd_gear_slug );
+
+        $messages['post'] = array(
+            0 => '', // Unused. Messages start at index 1.
+            1 => sprintf( __( '%s updated. <a href="%s">View %s</a>' ), $wpd_gear_slug_cap, esc_url( get_permalink( $post_ID ) ), $wpd_gear_slug ),
+            2 => __( 'Custom field updated.' ),
+            3 => __( 'Custom field deleted.' ),
+            4 => sprintf( __( '%s updated.' ), $wpd_gear_slug_cap ),
+            5 => isset( $_GET['revision'] ) ? sprintf( __( '%s restored to revision from %s' ), $wpd_gear_slug_cap, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+            6 => sprintf( __( '%s published. <a href="%s">View %s</a>' ), $wpd_gear_slug_cap, esc_url( get_permalink( $post_ID ) ), $wpd_gear_slug ),
+            7 => sprintf( __( '%s saved.' ), $wpd_gear_slug_cap ),
+            8 => sprintf( __( '%s submitted. <a target="_blank" href="%s">Preview %s</a>' ), $wpd_gear_slug_cap, esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ), $wpd_gear_slug ),
+            9 => sprintf( __( '%s scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview %s</a>' ),
+            date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink( $post_ID ) ), $wpd_gear_slug ),
+            10 => sprintf( __( '%s draft updated. <a target="_blank" href="%s">Preview %s</a>' ), $wpd_gear_slug_cap, esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ), $wpd_gear_slug ),
+        );
+    }
+
+	return $messages;
+}
+add_filter( 'post_updated_messages', 'wpd_gear_updated_messages' );
