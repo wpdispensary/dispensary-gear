@@ -74,5 +74,3 @@ function get_wpd_gear_prices_simple( $id = NULL, $phrase = NULL ) {
 	return $phrase_final;
 
 }
-
-}
