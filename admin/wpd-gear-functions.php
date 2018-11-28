@@ -74,3 +74,14 @@ function get_wpd_gear_prices_simple( $id = NULL, $phrase = NULL ) {
 	return $phrase_final;
 
 }
+
+/**
+ * Add gear categories to WPD eCommerce single item display
+ * 
+ * @since 1.7
+ */
+function wpd_gear_item_types() {
+	// Display Gear Category
+	echo "<span class='wpd-ecommerce category gear'>" . get_the_term_list( get_the_ID(), 'wpd_gear_category', '', ', ' ) . "</span>";
+}
+add_action( 'wpd_ecommerce_item_types_inside_after', 'wpd_gear_item_types' );
