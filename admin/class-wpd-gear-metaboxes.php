@@ -24,7 +24,7 @@ function wpd_gear_pricing_metaboxes() {
 	foreach ( $screens as $screen ) {
 		add_meta_box(
 			'wpd_gear_prices',
-			__( 'Product Pricing', 'wp-dispensary' ),
+			__( 'Product Pricing', 'wpd-gear' ),
 			'wpd_gear_prices',
 			$screen,
 			'normal',
@@ -53,19 +53,19 @@ function wpd_gear_prices() {
 
 	/** Echo out the fields */
 	echo '<div class="gearbox">';
-	echo '<p>' . __( 'Price per unit:', 'wp-dispensary' ) . '</p>';
+	echo '<p>' . __( 'Price per unit:', 'wpd-gear' ) . '</p>';
 	echo '<input type="text" name="_priceeach" value="' . esc_html( $priceeach ) . '" class="widefat" />';
 	echo '</div>';
 
 	/** Echo out the fields */
 	echo '<div class="gearbox">';
-	echo '<p>' . __( 'Price per pack:', 'wp-dispensary' ) . '</p>';
+	echo '<p>' . __( 'Price per pack:', 'wpd-gear' ) . '</p>';
 	echo '<input type="text" name="_priceperpack" value="' . esc_html( $priceperpack ) . '" class="widefat" />';
 	echo '</div>';
 
 	/** Echo out the fields */
 	echo '<div class="gearbox">';
-	echo '<p>' . __( 'Units per pack:', 'wp-dispensary' ) . '</p>';
+	echo '<p>' . __( 'Units per pack:', 'wpd-gear' ) . '</p>';
 	echo '<input type="number" name="_unitsperpack" value="' . esc_html( $unitsperpack ) . '" class="widefat" />';
 	echo '</div>';
 

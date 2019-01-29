@@ -26,18 +26,18 @@ add_action( 'init', 'wpdispensary_gearcategory', 0 );
 function wpdispensary_gearcategory() {
 
 	$labels = array(
-		'name'              => _x( 'Categories', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Categories' ),
-		'all_items'         => __( 'All Categories' ),
-		'parent_item'       => __( 'Parent Category' ),
-		'parent_item_colon' => __( 'Parent Category:' ),
-		'edit_item'         => __( 'Edit Category' ),
-		'update_item'       => __( 'Update Category' ),
-		'add_new_item'      => __( 'Add New Category' ),
-		'new_item_name'     => __( 'New Category Name' ),
-		'not_found'         => 'No categories found',
-		'menu_name'         => __( 'Categories' ),
+		'name'              => _x( 'Categories', 'taxonomy general name', 'wpd-gear' ),
+		'singular_name'     => _x( 'Category', 'taxonomy singular name', 'wpd-gear' ),
+		'search_items'      => __( 'Search Categories', 'wpd-gear' ),
+		'all_items'         => __( 'All Categories', 'wpd-gear' ),
+		'parent_item'       => __( 'Parent Category', 'wpd-gear' ),
+		'parent_item_colon' => __( 'Parent Category:', 'wpd-gear' ),
+		'edit_item'         => __( 'Edit Category', 'wpd-gear' ),
+		'update_item'       => __( 'Update Category', 'wpd-gear' ),
+		'add_new_item'      => __( 'Add New Category', 'wpd-gear' ),
+		'new_item_name'     => __( 'New Category Name', 'wpd-gear' ),
+		'not_found'         => __( 'No categories found', 'wpd-gear' ),
+		'menu_name'         => __( 'Categories', 'wpd-gear' ),
 	);
 
 	register_taxonomy( 'wpd_gear_category', 'gear', array(
