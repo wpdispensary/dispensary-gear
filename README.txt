@@ -3,8 +3,8 @@ Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: weed, dispensary, cannabis, marijuana, wp-dispensary, ecommerce, gear
 Requires at least: 3.0.1
-Tested up to: 4.9.8
-Stable tag: 1.6
+Tested up to: 4.9.9
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,13 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.7 =
+* Added Gear category to the eCommerce add-on's single item display in `admin/wpd-gear-functions.php`
+* Removed extra `}` in the Gear helper functions in `admin/wpd-gear-functions.php`
+* Updated text strings for localization in `admin/wpd-gear-functions.php`
+* Updated `.pot` file with new text strings for localization in `languages/wpd-gear.pot`
+* General code cleanup
 
 = 1.6 =
 * Added 2 helper functions `get_wpd_gear_prices_simple` and `wpd_gear_prices_simple` in `admin/wpd-gear-functions.php`
