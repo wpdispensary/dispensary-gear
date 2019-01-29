@@ -155,13 +155,13 @@ class wpd_gear_widget extends WP_Widget {
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
-		$instance['title']          = strip_tags( $new_instance['title'] );
-		$instance['limit']          = strip_tags( $new_instance['limit'] );
-		$instance['order']          = $new_instance['order'];
-		$instance['featuredimage']  = $new_instance['featuredimage'];
-		$instance['imagesize']      = $new_instance['imagesize'];
-		$instance['gearname']       = $new_instance['gearname'];
-		$instance['gearcategory']   = $new_instance['gearcategory'];
+		$instance['title']         = strip_tags( $new_instance['title'] );
+		$instance['limit']         = strip_tags( $new_instance['limit'] );
+		$instance['order']         = $new_instance['order'];
+		$instance['featuredimage'] = $new_instance['featuredimage'];
+		$instance['imagesize']     = $new_instance['imagesize'];
+		$instance['gearname']      = $new_instance['gearname'];
+		$instance['gearcategory']  = $new_instance['gearcategory'];
 
 		return $instance;
 	}
@@ -189,13 +189,13 @@ class wpd_gear_widget extends WP_Widget {
 		$wpd_gear_slug_cap = ucfirst( $wpd_gear_slug );
 
 		$defaults = array(
-			'title'          => 'Recent ' . $wpd_gear_slug_cap,
-			'limit'          => '5',
-			'order'          => '',
-			'featuredimage'  => '',
-			'imagesize'      => 'wpdispensary-widget',
-			'gearname'       => '',
-			'gearcategory'   => '',
+			'title'         => 'Recent ' . $wpd_gear_slug_cap,
+			'limit'         => '5',
+			'order'         => '',
+			'featuredimage' => '',
+			'imagesize'     => 'wpdispensary-widget',
+			'gearname'      => '',
+			'gearcategory'  => '',
 		);
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
