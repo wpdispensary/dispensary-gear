@@ -23,17 +23,6 @@ function wpd_gear_featuredimage( $data, $post, $request ) {
 add_filter( 'rest_prepare_gear', 'wpd_gear_featuredimage', 10, 3 );
 
 /**
- * Add Category taxonomy for the Gear Custom Post Type
- */
-function wpd_gear_category( $data, $post, $request ) {
-	$_data                  = $data->data;
-	$_data['gear_category'] = get_the_term_list( $post->ID, 'wpd_gear_category', '', ' ', '' );
-	$data->data             = $_data;
-	return $data;
-}
-add_filter( 'rest_prepare_gear', 'wpd_gear_category', 10, 3 );
-
-/**
  * Add 'categories' endpoint for the Gear Custom Post Type
  *
  * @since 1.3
