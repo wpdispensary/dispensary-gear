@@ -94,9 +94,9 @@ function wpd_gear_prices_save_meta( $post_id, $post ) {
 	 * We'll put it into an array to make it easier to loop though.
 	 */
 
-	$prices_meta['_priceeach']    = $_POST['_priceeach'];
-	$prices_meta['_priceperpack'] = $_POST['_priceperpack'];
-	$prices_meta['_unitsperpack'] = $_POST['_unitsperpack'];
+	$prices_meta['_priceeach']    = esc_html( $_POST['_priceeach'] );
+	$prices_meta['_priceperpack'] = esc_html( $_POST['_priceperpack'] );
+	$prices_meta['_unitsperpack'] = esc_html( $_POST['_unitsperpack'] );
 
 	/** Add values of $prices_meta as custom fields */
 
