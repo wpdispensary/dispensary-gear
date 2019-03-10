@@ -61,7 +61,6 @@ function wpdispensary_gear_shortcode( $atts ) {
 
 	while ( $wpdquery->have_posts() ) : $wpdquery->the_post();
 
-		$querytitle          = get_the_title();
 		if( get_post_type() == 'gear' ) {
 			// Price.
 			$gearpricing = get_wpd_gear_prices_simple( NULL, TRUE );
@@ -69,8 +68,8 @@ function wpdispensary_gear_shortcode( $atts ) {
 
 		/** Check shortcode options input by user */
 
-		if ( $name == "show" ) {
-			$showname = '<p><strong><a href="' . get_permalink() . '">' . $querytitle . '</a></strong></p>';
+		if ( 'show' == $name ) {
+			$showname = '<p><strong><a href="' . get_permalink() . '">' . get_the_title() . '</a></strong></p>';
 		} else {
 			$showname = '';
 		}
