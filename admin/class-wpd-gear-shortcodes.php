@@ -61,8 +61,8 @@ function wpdispensary_gear_shortcode( $atts ) {
 
 	while ( $wpdquery->have_posts() ) : $wpdquery->the_post();
 
-		if( get_post_type() == 'gear' ) {
-			// Price.
+		// Pricing.
+		if ( 'gear' == get_post_type() ) {
 			$gearpricing = get_wpd_gear_prices_simple( NULL, TRUE );
 		}
 
@@ -74,9 +74,9 @@ function wpdispensary_gear_shortcode( $atts ) {
 			$showname = '';
 		}
 
-		if( get_post_type() == 'gear' ) {
-			if ( $info == "show" ) {
-				$showinfo = $gearpricing;
+		if ( 'gear' == get_post_type() ) {
+			if ( 'show' == $info ) {
+				$showinfo = get_wpd_gear_prices_simple( NULL, TRUE );
 			} else {
 				$showinfo = '';
 			}
@@ -106,7 +106,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 			$wpd_shortcode_top_gear = ob_get_contents();
 		ob_end_clean();
 
-		$wpdposts .= '<div class="wpdshortcode wpd-gear ' . $class .'">'. $wpd_shortcode_top_gear .''. $wpd_shortcode_inside_top .''. $showimage;
+		$wpdposts .= '<div class="wpdshortcode wpd-gear ' . $class .'">'. $wpd_shortcode_top_gear . $wpd_shortcode_inside_top . $showimage;
 
 		ob_start();
 			do_action( 'wpd_shortcode_bottom_gear' );
@@ -118,7 +118,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 			$wpd_shortcode_inside_bottom = ob_get_contents();
 		ob_end_clean();
 
-		$wpdposts .= $showname .''. $showinfo .''. $wpd_shortcode_inside_bottom .''. $wpd_shortcode_bottom_gear .'</div>';
+		$wpdposts .= $showname . $showinfo . $wpd_shortcode_inside_bottom . $wpd_shortcode_bottom_gear .'</div>';
 
 	endwhile;
 
