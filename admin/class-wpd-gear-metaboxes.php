@@ -118,3 +118,14 @@ function wpd_gear_prices_save_meta( $post_id, $post ) {
 }
 
 add_action( 'save_post', 'wpd_gear_prices_save_meta', 1, 2 ); /** Save the custom fields */
+
+/**
+ * Function to add Top Sellers metabox to "Gear" menu type
+ *
+ * @since    1.8.0
+ */
+function wpd_gear_topsellers( $array ) {
+    $array[] = 'gear';
+    return $array;
+}
+add_filter( 'wpd_top_sellers_metabox', 'wpd_gear_topsellers' );
