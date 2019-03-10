@@ -81,7 +81,21 @@ function get_wpd_gear_prices_simple( $id = NULL, $phrase = NULL ) {
  * @since 1.7
  */
 function wpd_gear_item_types() {
-	// Display Gear Category
+	// Display Gear Category.
 	echo "<span class='wpd-ecommerce category gear'>" . get_the_term_list( get_the_ID(), 'wpd_gear_category', '', ', ' ) . "</span>";
 }
 add_action( 'wpd_ecommerce_item_types_inside_after', 'wpd_gear_item_types' );
+
+/**
+ * Add gear to WP Dispensary menu types
+ * 
+ * @since 1.8
+ */
+function wpd_gear_menu_types( $menu_types ) {
+
+	// Add gear.
+	$menu_types['wpd-gear'] = __( 'Gear', 'wp-dispensary' );
+
+	return $menu_types;
+}
+add_filter( 'wpd_menu_types', 'wpd_gear_menu_types' );
