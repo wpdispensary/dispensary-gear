@@ -3,8 +3,8 @@ Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: weed, dispensary, cannabis, marijuana, wp-dispensary, ecommerce, gear
 Requires at least: 3.0.1
-Tested up to: 5.0.3
-Stable tag: 1.7.1
+Tested up to: 5.1
+Stable tag: 1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,17 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.8 =
+* Added gear prices to `get_wpd_all_prices_simple` filter in `admin/wpd-gear-functions.php`
+* Added gear to `wpd_menu_types` helper function in `admin/wpd-gear-functions.php`
+* Added gear to `wpd_top_sellers_metabox` filter in `admin/class-wpd-gear-metaboxes.php`
+* Updated widget to use the `wpd_product_image` helper function in `admin/class-wpd-gear-widgets.php`
+* Updated code to escape `$_POST` metabox data in `admin/class-wpd-gear-metaboxes.php`
+* Updated gear category taxonomy `show_in_rest` value to `true` in `admin/class-wpd-gear-taxonomies.php`
+* Updated shortcode to use `get_wpd_product_image` helper function in `admin/class-wpd-gear-shortcodes.php`
+* Updated product title to use `get_the_title` function in `admin/class-wpd-gear-shortcodes.php`
+* WordPress Coding Standards updates in `admin/class-wpd-gear-shortcodes.php`
 
 = 1.7.1 =
 * Removed custom REST API codes for Gear category endpoint in `admin/class=wpd-gear-rest-api.php`
