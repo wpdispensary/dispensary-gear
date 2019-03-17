@@ -4,7 +4,7 @@ Donate link: https://www.wpdispensary.com
 Tags: weed, dispensary, cannabis, marijuana, wp-dispensary, ecommerce, gear
 Requires at least: 3.0.1
 Tested up to: 5.1
-Stable tag: 1.8
+Stable tag: 1.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,9 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.8.1 =
+* Updated the widget to pass the post ID to the `wpd_product_image` helper function in `admin/class-wpd-gear-widgets.php`
 
 = 1.8 =
 * Added gear prices to `get_wpd_all_prices_simple` filter in `admin/wpd-gear-functions.php`
