@@ -63,7 +63,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 
 		// Pricing.
 		if ( 'gear' == get_post_type() ) {
-			$gearpricing = get_wpd_gear_prices_simple( NULL, TRUE );
+			$gearpricing = get_wpd_gear_prices_simple( get_the_ID(), TRUE );
 		}
 
 		/** Check shortcode options input by user */
@@ -76,7 +76,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 
 		if ( 'gear' == get_post_type() ) {
 			if ( 'show' == $info ) {
-				$showinfo = get_wpd_gear_prices_simple( NULL, TRUE );
+				$showinfo = get_wpd_gear_prices_simple( get_the_ID(), TRUE );
 			} else {
 				$showinfo = '';
 			}
@@ -89,7 +89,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 		}
 
 		if ( 'show' === $image ) {
-			$showimage = get_wpd_product_image( $imagesize );
+			$showimage = get_wpd_product_image( get_the_ID(), $imagesize );
 		} else {
 			$showimage = '';
 		}
