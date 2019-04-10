@@ -51,6 +51,39 @@ function wpd_gear_featured_images( $data, $post, $request ) {
 add_filter( 'rest_prepare_gear', 'wpd_gear_featured_images', 10, 3 );
 
 /**
+ * Add 'details' endpoint for the Gear Custom Post Type
+ *
+ * @since 1.9
+ */
+function wpd_gear_product_details( $data, $post, $request ) {
+
+	// Display product details.
+	$product_details = array(
+		'thc'         => 'show',
+		'thca'        => '',
+		'cbd'         => '',
+		'cba'         => '',
+		'cbn'         => '',
+		'cbg'         => '',
+		'seed_count'  => 'show',
+		'clone_count' => 'show',
+		'total_thc'   => 'show',
+		'size'        => 'show',
+		'servings'    => 'show',
+		'weight'      => 'show'
+	);
+
+	$details = apply_filters( 'wpd_gear_product_details_all', $product_details );
+
+	$_data            = $data->data;
+	$_data['details'] = get_wpd_product_details( $post->ID, $details );
+	$data->data       = $_data;
+	return $data;
+
+}
+add_filter( 'rest_prepare_gear', 'wpd_gear_product_details', 10, 3 );
+
+/**
  * Add 'categories' endpoint for the Gear Custom Post Type
  *
  * @since 1.3
