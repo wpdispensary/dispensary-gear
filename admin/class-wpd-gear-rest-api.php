@@ -84,6 +84,20 @@ function wpd_gear_product_details( $data, $post, $request ) {
 add_filter( 'rest_prepare_gear', 'wpd_gear_product_details', 10, 3 );
 
 /**
+ * Add 'prices' endpoint for the Custom Post Types
+ *
+ * @since 2.7
+ */
+function wpd_gear_product_prices_all( $data, $post, $request ) {
+	$_data           = $data->data;
+	$_data['prices'] = get_wpd_all_prices_simple( $post->ID, TRUE );
+	$data->data      = $_data;
+	return $data;
+
+}
+add_filter( 'rest_prepare_gear', 'wpd_gear_product_prices_all', 10, 3 );
+
+/**
  * Add 'categories' endpoint for the Gear Custom Post Type
  *
  * @since 1.3
