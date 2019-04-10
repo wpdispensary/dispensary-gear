@@ -4,7 +4,7 @@ Donate link: https://www.wpdispensary.com
 Tags: weed, dispensary, cannabis, marijuana, wp-dispensary, ecommerce, gear
 Requires at least: 3.0.1
 Tested up to: 5.1
-Stable tag: 1.8.2
+Stable tag: 1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,11 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.9 =
+* Added 'prices' REST API endpoint in `admin/class-wpd-gear-rest-api.php`
+* Added 'details' REST API endpoint in `admin/class-wpd-gear-rest-api.php`
+* Added REST API endpoint for various featured image sizes in `admin/class-wpd-gear-rest-api.php`
 
 = 1.8.2 =
 * Bug fix pass the ID argument to prices and image helper functions in `admin/class-wpd-gear-shortcodes.php`
