@@ -17,13 +17,7 @@
  *
  * @since    1.0.0
  */
-
-add_action( 'init', 'wpdispensary_gearcategory', 0 );
-
-/**
- * Gear category
- */
-function wpdispensary_gearcategory() {
+function wp_dispensary_gear_category() {
 
 	$labels = array(
 		'name'              => _x( 'Categories', 'taxonomy general name', 'wpd-gear' ),
@@ -55,3 +49,4 @@ function wpdispensary_gearcategory() {
 	) );
 
 }
+add_action( 'init', 'wp_dispensary_gear_category', 0 );

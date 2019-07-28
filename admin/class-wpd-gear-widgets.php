@@ -73,7 +73,7 @@ class wpd_gear_widget extends WP_Widget {
 		do_action( 'wpd_gear_widget_before' );
 
 		if ( ! 'on' == $instance['featuredimage'] ) {
-			echo "<ul class='wpdispensary-list'>";
+			echo '<ul class="wpdispensary-list">';
 		}
 
 		if ( 'on' === $instance['order'] ) {
@@ -112,7 +112,7 @@ class wpd_gear_widget extends WP_Widget {
 					echo "<span class='wpdispensary-widget-title'><a href='" . esc_url( get_permalink( $post->ID ) ) . "'>" . get_the_title( $post->ID ) . "</a></span>";
 				}
 				if ( 'on' === $instance['gearcategory'] ) {
-					echo "<span class='wpdispensary-widget-categories'>" . get_the_term_list( $post->ID, 'wpd_gear_category' ) . "</a></span>";
+					echo '<span class="wpdispensary-widget-categories">' . get_the_term_list( $post->ID, 'wpd_gear_category' ) . '</a></span>';
 				}
 
 				do_action( 'wpd_gear_widget_inside_bottom' );
@@ -121,11 +121,11 @@ class wpd_gear_widget extends WP_Widget {
 
 			} else {
 
-				echo '<li>';
 				if ( 'on' === $instance['gearname'] ) {
-					echo "<a href='" . esc_url( get_permalink( $post->ID ) ) . "' class='wpdispensary-widget-link'>" . get_the_title( $post->ID ) . "</a>";
+					echo '<li>';
+					echo '<a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="wpdispensary-widget-link">' . get_the_title( $post->ID ) . '</a>';
+					echo '</li>';
 				}
-				echo '</li>';
 
 			}
 

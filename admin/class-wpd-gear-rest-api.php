@@ -126,12 +126,6 @@ add_filter( 'rest_prepare_gear', 'wpd_gear_category_numbers', 10, 3 );
  *
  * @since    1.1.0
  */
-
-add_action( 'rest_api_init', 'slug_register_wpd_gear_prices' );
-
-/**
- * Registering Prices
- */
 function slug_register_wpd_gear_prices() {
 	$productsizes = array( '_priceeach', '_priceperpack', '_unitsperpack' );
 	foreach ( $productsizes as $size ) {
@@ -146,12 +140,13 @@ function slug_register_wpd_gear_prices() {
 		);
 	} /** /foreach */
 }
+add_action( 'rest_api_init', 'slug_register_wpd_gear_prices' );
 
 /**
  * Get Prices
  */
 function slug_get_wpd_gear_prices( $object, $field_name, $request ) {
-	return get_post_meta( $object['id'], $field_name, true );
+	return get_post_meta( $object['id'], $field_name, TRUE );
 }
 
 /**

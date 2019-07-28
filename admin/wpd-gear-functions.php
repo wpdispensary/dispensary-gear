@@ -35,8 +35,8 @@ function get_wpd_gear_prices_simple( $product_id, $phrase = NULL ) {
 	$currency_code = wpd_currency_code();
 
 	// Get prices.
-	$price_each     = get_post_meta( $product_id, '_priceeach', true );
-	$price_per_pack = get_post_meta( $product_id, '_priceperpack', true );
+	$price_each     = get_post_meta( $product_id, '_priceeach', TRUE );
+	$price_per_pack = get_post_meta( $product_id, '_priceperpack', TRUE );
 	$pricingsep     = '-';
 
 	// Check if phrase is set in function.
@@ -51,17 +51,17 @@ function get_wpd_gear_prices_simple( $product_id, $phrase = NULL ) {
 	 */
 	if ( '' != $price_each && '' != $price_per_pack ) {
 
-		$pricing = $currency_code . $price_each . $pricingsep . $price_per_pack;
+		$pricing      = $currency_code . $price_each . $pricingsep . $price_per_pack;
 		$phrase_final = "<span class='wpd-productinfo pricing'>" . $pricing_phrase . $pricing . "</span>";
 
 	} elseif ( '' === $price_each && '' != $price_per_pack ) {
 
-		$pricing = $currency_code . $price_per_pack;
+		$pricing      = $currency_code . $price_per_pack;
 		$phrase_final = "<span class='wpd-productinfo pricing'>" . $pricing_phrase . $pricing . "</span>";
 
 	} elseif ( '' != $price_each && '' === $price_per_pack ) {
 
-		$pricing = $currency_code . $price_each;
+		$pricing      = $currency_code . $price_each;
 		$phrase_final = "<span class='wpd-productinfo pricing'>" . $pricing_phrase . $pricing . "</span>";
 
 	} else {
@@ -72,7 +72,6 @@ function get_wpd_gear_prices_simple( $product_id, $phrase = NULL ) {
 	 * Return Pricing Prices.
 	 */
 	return $phrase_final;
-
 }
 
 /**
@@ -86,7 +85,7 @@ function wpd_gear_item_types() {
 	$product_id = get_the_ID();
 
 	// Display Gear Category.
-	echo "<span class='wpd-ecommerce category gear'>" . get_the_term_list( $product_id, 'wpd_gear_category', '', ' ' ) . "</span>";
+	echo '<span class="wpd-ecommerce category gear">' . get_the_term_list( $product_id, 'wpd_gear_category', '', ' ' ) . '</span>';
 }
 add_action( 'wpd_ecommerce_item_types_inside_after', 'wpd_gear_item_types' );
 
