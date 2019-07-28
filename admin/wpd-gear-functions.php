@@ -97,7 +97,7 @@ add_action( 'wpd_ecommerce_item_types_inside_after', 'wpd_gear_item_types' );
 function wpd_gear_menu_types( $menu_types ) {
 
 	// Add gear.
-	$menu_types['wpd-gear'] = __( 'Gear', 'wp-dispensary' );
+	$menu_types['wpd-gear'] = __( 'Gear', 'wpd-gear' );
 
 	return $menu_types;
 }
