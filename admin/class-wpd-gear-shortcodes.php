@@ -27,18 +27,30 @@ function wpdispensary_gear_shortcode( $atts ) {
 	/* Attributes */
 	extract( shortcode_atts(
 		array(
-			'posts'   => '100',
-			'class'   => '',
-			'name'    => 'show',
-			'info'    => 'show',
-			'title'   => $wpd_gear_slug_cap,
-			'image'   => 'show',
-			'imgsize' => 'dispensary-image',
-			'viewall' => '',
+			'posts'    => '100',
+			'class'    => '',
+			'name'     => 'show',
+			'info'     => 'show',
+			'title'    => $wpd_gear_slug_cap,
+			'image'    => 'show',
+			'imgsize'  => 'dispensary-image',
+			'orderby'  => '',
+			'meta_key' => '',
+			'viewall'  => '',
 		),
 		$atts,
 		'wpd_gear'
 	) );
+
+	// Variables.
+	$order    = '';
+	$ordernew = '';
+
+	// Order by.
+	if ( '' !== $orderby ) {
+		$order    = $orderby;
+		$ordernew = 'ASC';
+	}
 
 	/**
 	 * Code to create shortcode for Dispensary Gear
@@ -47,7 +59,10 @@ function wpdispensary_gear_shortcode( $atts ) {
 		array(
 			'post_type'      => 'gear',
 			'posts_per_page' => $posts,
-		)
+			'orderby'        => $order,
+			'order'          => $ordernew,
+			'meta_key'       => $meta_key,
+			)
 	);
 
 	if ( 'show' === $viewall ) {
