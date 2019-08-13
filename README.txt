@@ -3,8 +3,8 @@ Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: weed, dispensary, cannabis, marijuana, wp-dispensary, ecommerce, gear
 Requires at least: 3.0.1
-Tested up to: 5.1
-Stable tag: 1.9
+Tested up to: 5.2.2
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,14 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 2.0 =
+* Added `orderby` and `meta_key` shortcode attributes in `admin/class-wpd-gear-shortcodes.php`
+* Updated eCommerce display to remove comma between categories in `admin/wpd-gear-functions.php`
+* Updated select options for featured image sizes in widgets in `admin/class-wpd-gear-widgets.php`
+* Updated product titles to use h2 wrapper in `admin/class-wpd-gear-shortcodes.php`
+* Updated `.pot` file with text strings for localization in `languages/wpd-gear.pot`
+* General code cleanup throughout multiple files
 
 = 1.9 =
 * Added 'prices' REST API endpoint in `admin/class-wpd-gear-rest-api.php`
