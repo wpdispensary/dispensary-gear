@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Dispensary's Gear\n"
-"POT-Creation-Date: 2019-01-29 13:06-0500\n"
-"PO-Revision-Date: 2019-01-29 13:06-0500\n"
+"POT-Creation-Date: 2019-08-12 20:54-0400\n"
+"PO-Revision-Date: 2019-08-12 20:54-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -226,57 +226,57 @@ msgstr ""
 msgid "Gear Base"
 msgstr ""
 
-#: admin/class-wpd-gear-shortcodes.php:55
+#: admin/class-wpd-gear-shortcodes.php:70
 msgid "(view all)"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:29
+#: admin/class-wpd-gear-taxonomies.php:23
 msgctxt "taxonomy general name"
 msgid "Categories"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:30
+#: admin/class-wpd-gear-taxonomies.php:24
 msgctxt "taxonomy singular name"
 msgid "Category"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:31
+#: admin/class-wpd-gear-taxonomies.php:25
 msgid "Search Categories"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:32
+#: admin/class-wpd-gear-taxonomies.php:26
 msgid "All Categories"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:33
+#: admin/class-wpd-gear-taxonomies.php:27
 msgid "Parent Category"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:34
+#: admin/class-wpd-gear-taxonomies.php:28
 msgid "Parent Category:"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:35
+#: admin/class-wpd-gear-taxonomies.php:29
 msgid "Edit Category"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:36
+#: admin/class-wpd-gear-taxonomies.php:30
 msgid "Update Category"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:37
+#: admin/class-wpd-gear-taxonomies.php:31
 msgid "Add New Category"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:38
+#: admin/class-wpd-gear-taxonomies.php:32
 msgid "New Category Name"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:39
+#: admin/class-wpd-gear-taxonomies.php:33
 msgid "No categories found"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:40
+#: admin/class-wpd-gear-taxonomies.php:34
 msgid "Categories"
 msgstr ""
 
@@ -288,28 +288,32 @@ msgstr ""
 msgid "Your most recent "
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:204
+#: admin/class-wpd-gear-widgets.php:207
 msgid "Widget Title:"
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:209
+#: admin/class-wpd-gear-widgets.php:212
 msgid "Amount of "
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:215
+#: admin/class-wpd-gear-widgets.php:218
 msgid "Randomize output?"
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:220 admin/class-wpd-gear-widgets.php:225
+#: admin/class-wpd-gear-widgets.php:223 admin/class-wpd-gear-widgets.php:228
 msgid "Display "
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:230
+#: admin/class-wpd-gear-widgets.php:233
 msgid "Display featured image?"
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:234
+#: admin/class-wpd-gear-widgets.php:237
 msgid "Image size:"
+msgstr ""
+
+#: admin/wpd-gear-functions.php:100
+msgid "Gear"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -323,7 +327,7 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "This plugin adds a GEAR menu type to the WP Dispensary menu plugin. Brought "
-"to you by <a href=\"http://www.deviodigital.com/\">Devio Digital</a> &amp; "
+"to you by <a href=\"https://www.deviodigital.com/\">Devio Digital</a> &amp; "
 "<a href=\"https://www.wpdispensary.com\">WP Dispensary</a>."
 msgstr ""
 
@@ -332,5 +336,5 @@ msgid "WP Dispensary"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://www.wpdispensary.com"
+msgid "https://www.wpdispensary.com"
 msgstr ""
