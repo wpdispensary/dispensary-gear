@@ -98,8 +98,6 @@ class wpd_gear_widget extends WP_Widget {
 
 			$wpd_gear_widget->the_post();
 
-			$do_not_duplicate = $post->ID;
-
 			if ( 'on' === $instance['featuredimage'] ) {
 
 				echo "<div class='wpdispensary-widget'>";

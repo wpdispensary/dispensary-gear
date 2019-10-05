@@ -17,9 +17,9 @@
  * @since 1.6
  * @return string
  */
-function wpd_gear_prices_simple( $id = NULL, $phrase = NULL ) {
+function wpd_gear_prices_simple( $gear_id = NULL, $phrase = NULL ) {
     // Filters the displayed flowers prices.
-    echo apply_filters( 'wpd_gear_prices_simple', get_wpd_gear_prices_simple( $id, $phrase ) );
+    echo apply_filters( 'wpd_gear_prices_simple', get_wpd_gear_prices_simple( $gear_id, $phrase ) );
 }
 
 /**
@@ -28,9 +28,6 @@ function wpd_gear_prices_simple( $id = NULL, $phrase = NULL ) {
  * @since 1.6
  */
 function get_wpd_gear_prices_simple( $product_id, $phrase = NULL ) {
-
-    global $post;
-
 	// Get currency code.
 	$currency_code = wpd_currency_code();
 
@@ -112,7 +109,7 @@ function get_wpd_gear_prices_simple_filter( $str ) {
 
 	// Add gear prices.
 	if ( 'gear' == get_post_type( get_the_ID() ) ) {
-		$str .= get_wpd_gear_prices_simple( $id = NULL, $phrase = NULL );
+		$str .= get_wpd_gear_prices_simple( $gear_id = NULL, $phrase = NULL );
 	}
 
 	return $str;

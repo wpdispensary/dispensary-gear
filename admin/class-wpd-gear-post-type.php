@@ -132,6 +132,7 @@ add_filter( 'wpd_admin_screen_thumbnails', 'wpd_gear_admin_screen_thumbnails' );
  */
 function wpd_gear_updated_messages( $messages ) {
     if ( 'gear' === get_post_type() ) {
+		global $post;
 		// Get permalink base for Gear.
 		$wpd_gear_slug = get_option( 'wpd_gear_slug' );
 

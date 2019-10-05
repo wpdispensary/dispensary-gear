@@ -24,7 +24,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 	// Capitalize first letter of new slug.
 	$wpd_gear_slug_cap = ucfirst( $wpd_gear_slug );
 
-	/* Attributes */
+	// Shortcode attributes.
 	extract( shortcode_atts(
 		array(
 			'posts'    => '100',
@@ -52,9 +52,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 		$ordernew = 'ASC';
 	}
 
-	/**
-	 * Code to create shortcode for Dispensary Gear
-	 */
+	// Query for shortcode posts.
 	$wpdquery = new WP_Query(
 		array(
 			'post_type'      => 'gear',
@@ -62,7 +60,7 @@ function wpdispensary_gear_shortcode( $atts ) {
 			'orderby'        => $order,
 			'order'          => $ordernew,
 			'meta_key'       => $meta_key,
-			)
+		)
 	);
 
 	if ( 'show' === $viewall ) {
@@ -72,14 +70,9 @@ function wpdispensary_gear_shortcode( $atts ) {
 		$viewgear = '';
 	}
 
-	$wpdposts = '<div class="wpdispensary"><h2 class="wpd-title">'. $title .'' . $viewgear .'</h2>';
+	$wpdposts = '<div class="wpdispensary"><h2 class="wpd-title">' . $title . $viewgear . '</h2>';
 
 	while ( $wpdquery->have_posts() ) : $wpdquery->the_post();
-
-		// Pricing.
-		if ( 'gear' == get_post_type() ) {
-			$gearpricing = get_wpd_gear_prices_simple( get_the_ID(), TRUE );
-		}
 
 		/** Check shortcode options input by user */
 
@@ -113,27 +106,27 @@ function wpdispensary_gear_shortcode( $atts ) {
 
 		ob_start();
 			do_action( 'wpd_shortcode_inside_top' );
-			$wpd_shortcode_inside_top = ob_get_contents();
+			$wpd_sc_inside_top = ob_get_contents();
 		ob_end_clean();
 
 		ob_start();
 			do_action( 'wpd_shortcode_top_gear' );
-			$wpd_shortcode_top_gear = ob_get_contents();
+			$wpd_sc_top_gear = ob_get_contents();
 		ob_end_clean();
 
-		$wpdposts .= '<div class="wpdshortcode wpd-gear ' . $class .'">' . $wpd_shortcode_top_gear . $wpd_shortcode_inside_top . $showimage;
+		$wpdposts .= '<div class="wpdshortcode wpd-gear ' . $class .'">' . $wpd_sc_top_gear . $wpd_sc_inside_top . $showimage;
 
 		ob_start();
 			do_action( 'wpd_shortcode_bottom_gear' );
-			$wpd_shortcode_bottom_gear = ob_get_contents();
+			$wpd_sc_bottom_gear = ob_get_contents();
 		ob_end_clean();
 
 		ob_start();
 			do_action( 'wpd_shortcode_inside_bottom' );
-			$wpd_shortcode_inside_bottom = ob_get_contents();
+			$wpd_sc_inside_bottom = ob_get_contents();
 		ob_end_clean();
 
-		$wpdposts .= $showname . $showinfo . $wpd_shortcode_inside_bottom . $wpd_shortcode_bottom_gear . '</div>';
+		$wpdposts .= $showname . $showinfo . $wpd_sc_inside_bottom . $wpd_sc_bottom_gear . '</div>';
 
 	endwhile;
 
