@@ -30,8 +30,8 @@ class WPD_Gear_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-		wpdispensary_gear();
-		wpdispensary_gearcategory();
+		wp_dispensary_gear();
+		wp_dispensary_gear_category();
 
 		/**
 		 * Flush Rewrite Rules

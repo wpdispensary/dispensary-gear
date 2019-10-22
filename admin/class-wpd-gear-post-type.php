@@ -15,10 +15,10 @@
  *
  * @since	   1.0.0
  */
-if ( ! function_exists( 'wpdispensary_gear' ) ) {
+if ( ! function_exists( 'wp_dispensary_gear' ) ) {
 
 /** Register Custom Post Type */
-function wpdispensary_gear() {
+function wp_dispensary_gear() {
 
 	// Get permalink base for Gear.
 	$wpd_gear_slug = get_option( 'wpd_gear_slug' );
