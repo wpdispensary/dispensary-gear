@@ -67,7 +67,7 @@ class WPD_Gear {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		$this->version = '2.0';
+		$this->version = '2.0.1';
 		if ( defined( 'WPD_GEAR_VERSION' ) ) {
 			$this->version = WPD_GEAR_VERSION;
 		}
