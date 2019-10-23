@@ -35,17 +35,19 @@ add_filter( 'rest_prepare_gear', 'wpd_gear_featuredimage', 10, 3 );
  * @since 1.9
  */
 function wpd_gear_featured_images( $data, $post, $request ) {
-	$_data                           = $data->data;
-	$thumbnail_id                    = get_post_thumbnail_id( $post->ID );
-	$wpd_default                     = wp_get_attachment_image_src( $thumbnail_id, 'dispensary-image' );
-	$wpd_small                       = wp_get_attachment_image_src( $thumbnail_id, 'wpd-small' );
-	$wpd_medium                      = wp_get_attachment_image_src( $thumbnail_id, 'wpd-medium' );
-	$wpd_large                       = wp_get_attachment_image_src( $thumbnail_id, 'wpd-large' );
-	$_data['featured_image_default'] = $wpd_default[0];
-	$_data['featured_image_small']   = $wpd_small[0];
-	$_data['featured_image_medium']  = $wpd_medium[0];
-	$_data['featured_image_large']   = $wpd_large[0];
-	$data->data                      = $_data;
+	$_data                             = $data->data;
+	$thumbnail_id                      = get_post_thumbnail_id( $post->ID );
+	$wpd_default                       = wp_get_attachment_image_src( $thumbnail_id, 'dispensary-image' );
+	$wpd_thumbnail                     = wp_get_attachment_image_src( $thumbnail_id, 'wpd-thumbnail' );
+	$wpd_small                         = wp_get_attachment_image_src( $thumbnail_id, 'wpd-small' );
+	$wpd_medium                        = wp_get_attachment_image_src( $thumbnail_id, 'wpd-medium' );
+	$wpd_large                         = wp_get_attachment_image_src( $thumbnail_id, 'wpd-large' );
+	$_data['featured_image_default']   = $wpd_default[0];
+	$_data['featured_image_thumbnail'] = $wpd_thumbnail[0];
+	$_data['featured_image_small']     = $wpd_small[0];
+	$_data['featured_image_medium']    = $wpd_medium[0];
+	$_data['featured_image_large']     = $wpd_large[0];
+	$data->data                        = $_data;
 	return $data;
 }
 add_filter( 'rest_prepare_gear', 'wpd_gear_featured_images', 10, 3 );
@@ -79,7 +81,6 @@ function wpd_gear_product_details( $data, $post, $request ) {
 	$_data['details'] = get_wpd_product_details( $post->ID, $details );
 	$data->data       = $_data;
 	return $data;
-
 }
 add_filter( 'rest_prepare_gear', 'wpd_gear_product_details', 10, 3 );
 
@@ -93,7 +94,6 @@ function wpd_gear_product_prices_all( $data, $post, $request ) {
 	$_data['prices'] = get_wpd_all_prices_simple( $post->ID, TRUE );
 	$data->data      = $_data;
 	return $data;
-
 }
 add_filter( 'rest_prepare_gear', 'wpd_gear_product_prices_all', 10, 3 );
 
