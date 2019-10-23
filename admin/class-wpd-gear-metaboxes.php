@@ -9,6 +9,7 @@
  * @package    WPD_Gear
  * @subpackage WPD_Gear/admin
  */
+
 /**
  * Prices metabox for the following menu types:
  * Pre-rolls, Edibles, Growers
@@ -31,9 +32,7 @@ function wpd_gear_pricing_metaboxes() {
 			'default'
 		);
 	}
-
 }
-
 add_action( 'add_meta_boxes', 'wpd_gear_pricing_metaboxes' );
 
 /**
@@ -53,29 +52,27 @@ function wpd_gear_prices() {
 
 	/** Echo out the fields */
 	echo '<div class="gearbox">';
-	echo '<p>' . __( 'Price per unit:', 'wpd-gear' ) . '</p>';
+	echo '<p>' . esc_attr__( 'Price per unit:', 'wpd-gear' ) . '</p>';
 	echo '<input type="text" name="_priceeach" value="' . esc_html( $priceeach ) . '" class="widefat" />';
 	echo '</div>';
 
 	/** Echo out the fields */
 	echo '<div class="gearbox">';
-	echo '<p>' . __( 'Price per pack:', 'wpd-gear' ) . '</p>';
+	echo '<p>' . esc_attr__( 'Price per pack:', 'wpd-gear' ) . '</p>';
 	echo '<input type="text" name="_priceperpack" value="' . esc_html( $priceperpack ) . '" class="widefat" />';
 	echo '</div>';
 
 	/** Echo out the fields */
 	echo '<div class="gearbox">';
-	echo '<p>' . __( 'Units per pack:', 'wpd-gear' ) . '</p>';
+	echo '<p>' . esc_attr__( 'Units per pack:', 'wpd-gear' ) . '</p>';
 	echo '<input type="number" name="_unitsperpack" value="' . esc_html( $unitsperpack ) . '" class="widefat" />';
 	echo '</div>';
-
 }
 
 /**
  * Save the Metabox Data
  */
 function wpd_gear_prices_save_meta( $post_id, $post ) {
-
 	/**
 	 * Verify this came from the our screen and with proper authorization,
 	 * because save_post can be triggered at other times
@@ -116,7 +113,6 @@ function wpd_gear_prices_save_meta( $post_id, $post ) {
 	}
 
 }
-
 add_action( 'save_post', 'wpd_gear_prices_save_meta', 1, 2 ); /** Save the custom fields */
 
 /**

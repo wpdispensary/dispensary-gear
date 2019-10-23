@@ -133,7 +133,7 @@ class wpd_gear_widget extends WP_Widget {
 
 		wp_reset_postdata();
 
-		if ( ! 'on' == $instance['featuredimage'] ) {
+		if ( 'on' !== $instance['featuredimage'] ) {
 			echo '</ul>';
 		}
 

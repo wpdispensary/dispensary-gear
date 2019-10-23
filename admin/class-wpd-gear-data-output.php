@@ -54,17 +54,16 @@ add_filter( 'wpd_vendor_tax_type', 'wpd_gear_vendor' );
  */
 
 /** Gear Price Output */
-function add_wpd_gear_price_data() { ?>
-	<?php
-	if ( in_array( get_post_type(), array( 'gear' ) ) ) { ?>
-		<?php if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) { ?>
-			<tr class="priceeach"><td><span><?php echo __( 'Price', 'wpd-gear' ); ?></span></td><td><?php echo wpd_currency_code(); ?><?php echo get_post_meta( get_the_ID(), '_priceeach', true ); ?></td></tr>
+function add_wpd_gear_price_data() {
+	if ( in_array( get_post_type(), array( 'gear' ) ) ) {
+		if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) { ?>
+			<tr class="priceeach"><td><span><?php esc_attr_e( 'Price', 'wpd-gear' ); ?></span></td><td><?php echo wpd_currency_code(); ?><?php echo get_post_meta( get_the_ID(), '_priceeach', true ); ?></td></tr>
 		<?php } ?>
 		<?php if ( get_post_meta( get_the_ID(), '_priceperpack', true ) ) { ?>
-			<tr class="priceeach"><td><span><?php echo get_post_meta( get_the_ID(), '_unitsperpack', true ); ?> <?php echo __( 'per pack', 'wpd-gear' ); ?></span></td><td><?php echo wpd_currency_code(); ?><?php echo get_post_meta( get_the_ID(), '_priceperpack', true ); ?></td></tr>
-		<?php } ?>
-	<?php }
-} // function
+			<tr class="priceeach"><td><span><?php echo get_post_meta( get_the_ID(), '_unitsperpack', true ); ?> <?php esc_attr_e( 'per pack', 'wpd-gear' ); ?></span></td><td><?php echo wpd_currency_code(); ?><?php echo get_post_meta( get_the_ID(), '_priceperpack', true ); ?></td></tr>
+		<?php }
+	}
+}
 add_action( 'wpd_pricingoutput_bottom', 'add_wpd_gear_price_data', 10 );
 
 /** Gear Vendors Output */
@@ -73,20 +72,20 @@ function wpd_gear_vendors() {
 
 	if ( in_array( get_post_type(), array( 'gear' ) ) ) {
 		if ( get_the_term_list( get_the_ID(), 'vendor', true ) ) { ?>
-			<tr><td><span><?php echo __( 'Vendors', 'wpd-gear' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'vendor', '', ', ' ); ?></td></tr>
+			<tr><td><span><?php esc_attr_e( 'Vendors', 'wpd-gear' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'vendor', '', ', ' ); ?></td></tr>
 		<?php }
-	} ?>
-<?php }
+	}
+}
 add_action( 'wpd_dataoutput_bottom', 'wpd_gear_vendors' );
 
 /** Gear Categories Output */
 function wpd_gear_categories() {
 	global $post;
 	
-	if ( in_array( get_post_type(), array( 'gear' ) ) ) { ?>
-		<?php if ( false != get_the_term_list( $post->ID, 'wpd_gear_category' ) ) { ?>
-			<tr><td><span><?php echo __( 'Categories', 'wpd-gear' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'wpd_gear_category', '', ', ' ); ?></td></tr>
-		<?php } else {} ?>
-	<?php } ?>
-<?php }
+	if ( in_array( get_post_type(), array( 'gear' ) ) ) {
+		if ( false != get_the_term_list( $post->ID, 'wpd_gear_category' ) ) { ?>
+			<tr><td><span><?php esc_attr_e( 'Categories', 'wpd-gear' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'wpd_gear_category', '', ', ' ); ?></td></tr>
+		<?php }
+	}
+}
 add_action( 'wpd_dataoutput_bottom', 'wpd_gear_categories' );
