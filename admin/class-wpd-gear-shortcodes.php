@@ -12,7 +12,7 @@
 /**
  * Gear Shortcode Fuction
  */
-function wpdispensary_gear_shortcode( $atts ) {
+function wp_dispensary_gear_shortcode( $atts ) {
 	// Get permalink base for Gear.
 	$wpd_gear_slug = get_option( 'wpd_gear_slug' );
 
@@ -133,4 +133,4 @@ function wpdispensary_gear_shortcode( $atts ) {
 
 	return $wpdposts . '</div>';
 }
-add_shortcode( 'wpd-gear', 'wpdispensary_gear_shortcode' );
+add_shortcode( 'wpd-gear', 'wp_dispensary_gear_shortcode' );
