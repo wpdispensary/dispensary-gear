@@ -93,7 +93,7 @@ function wp_dispensary_gear() {
 	register_post_type( 'gear', $args );
 
 }
-add_action( 'init', 'wpdispensary_gear', 0 );
+add_action( 'init', 'wp_dispensary_gear', 0 );
 
 }
 
