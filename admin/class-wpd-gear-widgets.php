@@ -40,7 +40,7 @@ class wpd_gear_widget extends WP_Widget {
 			'wpd_gear_widget',
 			__( 'WPD ' . $wpd_gear_slug_cap, 'wpd-gear' ),
 			array(
-				'description' => __( 'Your most recent ' . $wpd_gear_slug, 'wpd-gear' ),
+				'description' => __( 'Your most recent ' . $wpd_gear_slug_cap, 'wpd-gear' ),
 				'classname'   => 'wp-dispensary-widget',
 			)
 		);
