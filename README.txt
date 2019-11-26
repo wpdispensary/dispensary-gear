@@ -3,8 +3,8 @@ Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: weed, dispensary, cannabis, marijuana, wp-dispensary, ecommerce, gear
 Requires at least: 3.0.1
-Tested up to: 5.2.3
-Stable tag: 2.0.2
+Tested up to: 5.3
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,14 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 2.0.3 =
+*   Added minified version of admin CSS in `admin/css/wpd-gear-admin.min.css`
+*   Updated admin widget color styles to remove green bg color in `admin/css/wpd-gear-admin.css`
+*   Updated admin widget title in `admin/class-wpd-gear-widgets.php`
+*   Updated `$wpd_gear_slug_cap` in the widget description in `admin/class-wpd-gear-widgets.php`
+*   Updated `.pot` file with text strings for localization in `languages/wpd-gear.pot`
+*   General code cleanup throughout multiple files
 
 = 2.0.2 =
 *   Updated function name for Gear custom post type in `admin/class-wpd-gear-post-type.php`
