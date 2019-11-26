@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Dispensary's Gear\n"
-"POT-Creation-Date: 2019-08-12 20:54-0400\n"
-"PO-Revision-Date: 2019-08-12 20:54-0400\n"
+"POT-Creation-Date: 2019-11-26 17:09-0500\n"
+"PO-Revision-Date: 2019-11-26 17:08-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,41 +21,42 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: admin/class-wpd-gear-data-output.php:62
-msgid "Price:"
+#: admin/class-wpd-gear-data-output.php:60
+msgid "Price"
 msgstr ""
 
-#: admin/class-wpd-gear-data-output.php:65
+#: admin/class-wpd-gear-data-output.php:63
 msgid "per pack"
 msgstr ""
 
-#: admin/class-wpd-gear-data-output.php:78
-msgid "Vendors:"
+#: admin/class-wpd-gear-data-output.php:75
+msgid "Vendors"
 msgstr ""
 
-#: admin/class-wpd-gear-data-output.php:90
-msgid "Categories:"
+#: admin/class-wpd-gear-data-output.php:87
+#: admin/class-wpd-gear-taxonomies.php:34
+msgid "Categories"
 msgstr ""
 
-#: admin/class-wpd-gear-metaboxes.php:27
+#: admin/class-wpd-gear-metaboxes.php:28
 msgid "Product Pricing"
 msgstr ""
 
-#: admin/class-wpd-gear-metaboxes.php:56
+#: admin/class-wpd-gear-metaboxes.php:55
 msgid "Price per unit:"
 msgstr ""
 
-#: admin/class-wpd-gear-metaboxes.php:62
+#: admin/class-wpd-gear-metaboxes.php:61
 msgid "Price per pack:"
 msgstr ""
 
-#: admin/class-wpd-gear-metaboxes.php:68
+#: admin/class-wpd-gear-metaboxes.php:67
 msgid "Units per pack:"
 msgstr ""
 
 #: admin/class-wpd-gear-post-type.php:45 admin/class-wpd-gear-post-type.php:46
 #: admin/class-wpd-gear-post-type.php:47 admin/class-wpd-gear-post-type.php:48
-#: admin/class-wpd-gear-post-type.php:72 admin/class-wpd-gear-post-type.php:113
+#: admin/class-wpd-gear-post-type.php:72 admin/class-wpd-gear-post-type.php:112
 #, php-format
 msgid "%s"
 msgstr ""
@@ -163,7 +164,7 @@ msgstr ""
 msgid "Display the %s from your menu"
 msgstr ""
 
-#: admin/class-wpd-gear-post-type.php:113
+#: admin/class-wpd-gear-post-type.php:112
 #, php-format
 msgid "WP Dispensary's %s"
 msgstr ""
@@ -226,7 +227,7 @@ msgstr ""
 msgid "Gear Base"
 msgstr ""
 
-#: admin/class-wpd-gear-shortcodes.php:70
+#: admin/class-wpd-gear-shortcodes.php:68
 msgid "(view all)"
 msgstr ""
 
@@ -276,43 +277,39 @@ msgstr ""
 msgid "No categories found"
 msgstr ""
 
-#: admin/class-wpd-gear-taxonomies.php:34
-msgid "Categories"
-msgstr ""
-
 #: admin/class-wpd-gear-widgets.php:41
-msgid "Dispensary "
+msgid "WPD "
 msgstr ""
 
 #: admin/class-wpd-gear-widgets.php:43
 msgid "Your most recent "
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:207
+#: admin/class-wpd-gear-widgets.php:205
 msgid "Widget Title:"
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:212
+#: admin/class-wpd-gear-widgets.php:210
 msgid "Amount of "
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:218
+#: admin/class-wpd-gear-widgets.php:216
 msgid "Randomize output?"
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:223 admin/class-wpd-gear-widgets.php:228
+#: admin/class-wpd-gear-widgets.php:221 admin/class-wpd-gear-widgets.php:226
 msgid "Display "
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:233
+#: admin/class-wpd-gear-widgets.php:231
 msgid "Display featured image?"
 msgstr ""
 
-#: admin/class-wpd-gear-widgets.php:237
+#: admin/class-wpd-gear-widgets.php:235
 msgid "Image size:"
 msgstr ""
 
-#: admin/wpd-gear-functions.php:100
+#: admin/wpd-gear-functions.php:96
 msgid "Gear"
 msgstr ""
 
