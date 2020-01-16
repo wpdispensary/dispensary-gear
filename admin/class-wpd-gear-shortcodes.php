@@ -65,7 +65,7 @@ function wp_dispensary_gear_shortcode( $atts ) {
 
 	if ( 'show' === $viewall ) {
 		$gearlink = get_bloginfo( 'url' ) . '/gear/';
-		$viewgear = '<span class="wp-dispensary-view-all"><a href="' . apply_filters( 'wpd_gear_shortcode_view_all', $gearlink ) . '">' . __( '(view all)', 'wp-dispensary' ) . '</a></span>';
+		$viewgear = '<span class="wp-dispensary-view-all"><a href="' . apply_filters( 'wpd_gear_shortcode_view_all', $gearlink ) . '">' . esc_attr__( '(view all)', 'wp-dispensary' ) . '</a></span>';
 	} else {
 		$viewgear = '';
 	}
@@ -89,16 +89,19 @@ function wp_dispensary_gear_shortcode( $atts ) {
 			}
 		}
 
+		// Set image size variable.
 		if ( '' === $imgsize ) {
-			$imagesize = 'dispensary-image';
+			$image_size = 'dispensary-image';
 		} else {
-			$imagesize = $imgsize;
+			$image_size = $imgsize;
 		}
 
-		$showimage = '';
+		// Empty var.
+		$show_image = '';
 
+		// Show image?
 		if ( 'show' === $image ) {
-			$showimage = get_wpd_product_image( get_the_ID(), $imagesize );
+			$show_image = get_wpd_product_image( get_the_ID(), $image_size );
 		}
 
 		/** Shortcode display */
@@ -113,7 +116,7 @@ function wp_dispensary_gear_shortcode( $atts ) {
 			$wpd_sc_top_gear = ob_get_contents();
 		ob_end_clean();
 
-		$wpdposts .= '<div class="wpdshortcode wpd-gear ' . $class . '">' . $wpd_sc_top_gear . $wpd_sc_inside_top . $showimage;
+		$wpdposts .= '<div class="wpdshortcode wpd-gear ' . $class . '">' . $wpd_sc_top_gear . $wpd_sc_inside_top . $show_image;
 
 		ob_start();
 			do_action( 'wpd_shortcode_bottom_gear' );

@@ -49,17 +49,17 @@ function get_wpd_gear_prices_simple( $product_id, $phrase = NULL ) {
 	if ( '' != $price_each && '' != $price_per_pack ) {
 
 		$pricing      = $currency_code . $price_each . $pricingsep . $price_per_pack;
-		$phrase_final = "<span class='wpd-productinfo pricing'>" . $pricing_phrase . $pricing . "</span>";
+		$phrase_final = '<span class="wpd-productinfo pricing">' . $pricing_phrase . $pricing . '</span>';
 
 	} elseif ( '' === $price_each && '' != $price_per_pack ) {
 
 		$pricing      = $currency_code . $price_per_pack;
-		$phrase_final = "<span class='wpd-productinfo pricing'>" . $pricing_phrase . $pricing . "</span>";
+		$phrase_final = '<span class="wpd-productinfo pricing">' . $pricing_phrase . $pricing . '</span>';
 
 	} elseif ( '' != $price_each && '' === $price_per_pack ) {
 
 		$pricing      = $currency_code . $price_each;
-		$phrase_final = "<span class='wpd-productinfo pricing'>" . $pricing_phrase . $pricing . "</span>";
+		$phrase_final = '<span class="wpd-productinfo pricing">' . $pricing_phrase . $pricing . '</span>';
 
 	} else {
 		$phrase_final = '';
@@ -93,7 +93,7 @@ add_action( 'wpd_ecommerce_item_types_inside_after', 'wpd_gear_item_types' );
  */
 function wpd_gear_menu_types( $menu_types ) {
 	// Add gear.
-	$menu_types['wpd-gear'] = __( 'Gear', 'wpd-gear' );
+	$menu_types['wpd-gear'] = esc_attr__( 'Gear', 'wpd-gear' );
 
 	return $menu_types;
 }

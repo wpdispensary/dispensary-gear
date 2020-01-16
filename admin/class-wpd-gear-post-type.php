@@ -50,18 +50,18 @@ function wp_dispensary_gear() {
 		'parent_item_colon'     => sprintf( esc_html__( 'Parent %s:', 'wpd-gear' ), $wpd_gear_slug_cap ),
 		'all_items'             => sprintf( esc_html__( 'All %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
 		'add_new_item'          => sprintf( esc_html__( 'Add New %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
-		'add_new'               => __( 'Add New', 'wpd-gear' ),
+		'add_new'               => esc_html__( 'Add New', 'wpd-gear' ),
 		'new_item'              => sprintf( esc_html__( 'New %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
 		'edit_item'             => sprintf( esc_html__( 'Edit %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
 		'update_item'           => sprintf( esc_html__( 'Update %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
 		'view_item'             => sprintf( esc_html__( 'View %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
 		'search_items'          => sprintf( esc_html__( 'Search %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
-		'not_found'             => __( 'Not found', 'wpd-gear' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'wpd-gear' ),
-		'featured_image'        => __( 'Featured Image', 'wpd-gear' ),
-		'set_featured_image'    => __( 'Set featured image', 'wpd-gear' ),
-		'remove_featured_image' => __( 'Remove featured image', 'wpd-gear' ),
-		'use_featured_image'    => __( 'Use as featured image', 'wpd-gear' ),
+		'not_found'             => esc_html__( 'Not found', 'wpd-gear' ),
+		'not_found_in_trash'    => esc_html__( 'Not found in Trash', 'wpd-gear' ),
+		'featured_image'        => esc_html__( 'Featured Image', 'wpd-gear' ),
+		'set_featured_image'    => esc_html__( 'Set featured image', 'wpd-gear' ),
+		'remove_featured_image' => esc_html__( 'Remove featured image', 'wpd-gear' ),
+		'use_featured_image'    => esc_html__( 'Use as featured image', 'wpd-gear' ),
 		'insert_into_item'      => sprintf( esc_html__( 'Insert into %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
 		'uploaded_to_this_item' => sprintf( esc_html__( 'Uploaded to this %s', 'wpd-gear' ), $wpd_gear_slug_cap ),
 		'items_list'            => sprintf( esc_html__( '%s list', 'wpd-gear' ), $wpd_gear_slug_cap ),
@@ -73,7 +73,7 @@ function wp_dispensary_gear() {
 		'description'         => sprintf( esc_html__( 'Display the %s from your menu', 'wpd-gear' ), $wpd_gear_slug ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'thumbnail', ),
-		'taxonomies'          => array( ),
+		'taxonomies'          => array(),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -97,6 +97,11 @@ add_action( 'init', 'wp_dispensary_gear', 0 );
 
 }
 
+/**
+ * Add WP Dispensary submenu item in the admin dashboard
+ * 
+ * @return void
+ */
 function wpd_gear_add_admin_menu() {
 	// Get permalink base for Gear.
 	$wpd_gear_slug = get_option( 'wpd_gear_slug' );

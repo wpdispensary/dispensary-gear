@@ -107,7 +107,7 @@ class wpd_gear_widget extends WP_Widget {
 				wpd_product_image( $post->ID, $instance['imagesize'] );
 
 				if ( 'on' === $instance['gearname'] ) {
-					echo "<span class='wpdispensary-widget-title'><a href='" . esc_url( get_permalink( $post->ID ) ) . "'>" . get_the_title( $post->ID ) . "</a></span>";
+					echo '<span class="wpdispensary-widget-title"><a href="' . esc_url( get_permalink( $post->ID ) ) . '">' . get_the_title( $post->ID ) . '</a></span>';
 				}
 				if ( 'on' === $instance['gearcategory'] ) {
 					echo '<span class="wpdispensary-widget-categories">' . get_the_term_list( $post->ID, 'wpd_gear_category' ) . '</a></span>';

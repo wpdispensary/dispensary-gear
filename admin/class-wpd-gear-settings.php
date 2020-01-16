@@ -30,7 +30,7 @@ class WPD_Gear_Permalink_Settings {
 	 */
 	public function register_fields() {
 		register_setting( 'permalink', 'wpd_gear_slug', 'esc_attr' );
-		add_settings_field( 'wpd_gear_slug_setting', '<label for="wpd_gear_slug">' . __( 'Gear Base', 'wpd-gear' ) . '</label>', array( &$this, 'fields_html' ), 'permalink', 'optional' );
+		add_settings_field( 'wpd_gear_slug_setting', '<label for="wpd_gear_slug">' . esc_html__( 'Gear Base', 'wpd-gear' ) . '</label>', array( &$this, 'fields_html' ), 'permalink', 'optional' );
 	}
 
 	/**

@@ -22,16 +22,16 @@ function wp_dispensary_gear_category() {
 	$labels = array(
 		'name'              => _x( 'Categories', 'taxonomy general name', 'wpd-gear' ),
 		'singular_name'     => _x( 'Category', 'taxonomy singular name', 'wpd-gear' ),
-		'search_items'      => __( 'Search Categories', 'wpd-gear' ),
-		'all_items'         => __( 'All Categories', 'wpd-gear' ),
-		'parent_item'       => __( 'Parent Category', 'wpd-gear' ),
-		'parent_item_colon' => __( 'Parent Category:', 'wpd-gear' ),
-		'edit_item'         => __( 'Edit Category', 'wpd-gear' ),
-		'update_item'       => __( 'Update Category', 'wpd-gear' ),
-		'add_new_item'      => __( 'Add New Category', 'wpd-gear' ),
-		'new_item_name'     => __( 'New Category Name', 'wpd-gear' ),
-		'not_found'         => __( 'No categories found', 'wpd-gear' ),
-		'menu_name'         => __( 'Categories', 'wpd-gear' ),
+		'search_items'      => esc_attr__( 'Search Categories', 'wpd-gear' ),
+		'all_items'         => esc_attr__( 'All Categories', 'wpd-gear' ),
+		'parent_item'       => esc_attr__( 'Parent Category', 'wpd-gear' ),
+		'parent_item_colon' => esc_attr__( 'Parent Category:', 'wpd-gear' ),
+		'edit_item'         => esc_attr__( 'Edit Category', 'wpd-gear' ),
+		'update_item'       => esc_attr__( 'Update Category', 'wpd-gear' ),
+		'add_new_item'      => esc_attr__( 'Add New Category', 'wpd-gear' ),
+		'new_item_name'     => esc_attr__( 'New Category Name', 'wpd-gear' ),
+		'not_found'         => esc_attr__( 'No categories found', 'wpd-gear' ),
+		'menu_name'         => esc_attr__( 'Categories', 'wpd-gear' ),
 	);
 
 	register_taxonomy( 'wpd_gear_category', 'gear', array(

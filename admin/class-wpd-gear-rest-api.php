@@ -61,18 +61,18 @@ function wpd_gear_product_details( $data, $post, $request ) {
 
 	// Display product details.
 	$product_details = array(
-		'thc'         => 'show',
+		'thc'         => '',
 		'thca'        => '',
 		'cbd'         => '',
 		'cba'         => '',
 		'cbn'         => '',
 		'cbg'         => '',
-		'seed_count'  => 'show',
-		'clone_count' => 'show',
-		'total_thc'   => 'show',
-		'size'        => 'show',
-		'servings'    => 'show',
-		'weight'      => 'show'
+		'seed_count'  => '',
+		'clone_count' => '',
+		'total_thc'   => '',
+		'size'        => '',
+		'servings'    => '',
+		'weight'      => ''
 	);
 
 	$details = apply_filters( 'wpd_gear_product_details_all', $product_details );
@@ -107,7 +107,7 @@ function wpd_gear_category_numbers( $data, $post, $request ) {
 	$_data = $data->data;
 	$items = wp_get_post_terms( $post->ID, 'wpd_gear_category' );
 
-	foreach ( $items as $item=>$value ) {
+	foreach ( $items as $item => $value ) {
 		$_data['categories'][$item]['id']          = $value->term_id;
 		$_data['categories'][$item]['slug']        = $value->slug;
 		$_data['categories'][$item]['title']       = $value->name;
