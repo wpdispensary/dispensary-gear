@@ -68,7 +68,7 @@ class WPD_Gear {
 	 */
 	public function __construct() {
 		$this->plugin_name = 'wpd-gear';
-		$this->version     = '2.0.3';
+		$this->version     = '2.0.4';
 
 		if ( defined( 'WPD_GEAR_VERSION' ) ) {
 			$this->version = WPD_GEAR_VERSION;
