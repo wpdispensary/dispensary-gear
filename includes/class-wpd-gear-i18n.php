@@ -22,7 +22,7 @@
  * @since      1.0.0
  * @package    WPD_Gear
  * @subpackage WPD_Gear/includes
- * @author     WP Dispensary <deviodigital@gmail.com>
+ * @author     WP Dispensary <contact@wpdispensary.com>
  */
 class WPD_Gear_i18n {
 
