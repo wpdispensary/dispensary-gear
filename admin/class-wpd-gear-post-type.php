@@ -98,27 +98,6 @@ add_action( 'init', 'wp_dispensary_gear', 0 );
 }
 
 /**
- * Add WP Dispensary submenu item in the admin dashboard
- * 
- * @return void
- */
-function wpd_gear_add_admin_menu() {
-	// Get permalink base for Gear.
-	$wpd_gear_slug = get_option( 'wpd_gear_slug' );
-
-	// If custom base is empty, set default.
-	if ( '' == $wpd_gear_slug ) {
-		$wpd_gear_slug = 'gear';
-	}
-
-	// Capitalize first letter of new slug.
-	$wpd_gear_slug_cap = ucfirst( $wpd_gear_slug );
-
-	add_submenu_page( 'wpd-settings', sprintf( esc_html__( 'WP Dispensary\'s %s' ), $wpd_gear_slug_cap ), sprintf( esc_html__( '%s' ), $wpd_gear_slug_cap ), 'manage_options', 'edit.php?post_type=gear', NULL );
-}
-add_action( 'admin_menu', 'wpd_gear_add_admin_menu', 8 );
-
-/**
  * Function to add admin screen thumbnails to "Gear" menu type
  *
  * @since    1.3.0
